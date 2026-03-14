@@ -4,6 +4,7 @@ import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { articles } from "./Artigos";
 
@@ -18,9 +19,9 @@ export default function ArtigoDetail() {
     return (
       <PageTransition>
         <Header />
-        <div className="min-h-screen flex items-center justify-center pt-20">
+        <div className="min-h-screen flex items-center justify-center pt-20 bg-[#0a0a0a]">
           <div className="text-center">
-            <h1 className="font-heading text-3xl mb-4">Artigo não encontrado</h1>
+            <h1 className="font-heading text-3xl mb-4 text-white">Artigo não encontrado</h1>
             <Link to="/artigos" className="text-primary hover:underline">Ver todos os artigos</Link>
           </div>
         </div>
@@ -44,7 +45,9 @@ export default function ArtigoDetail() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-background">
+        <GradientDivider variant="gold-accent" />
+
+        <section className="py-16 md:py-24 bg-[#0a0a0a]">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 max-w-5xl mx-auto">
               <ArticleContent content={article.content} />
@@ -63,7 +66,7 @@ function ArticleContent({ content }: { content: string[] }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <article ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-      <div className="space-y-5 text-muted-foreground font-body text-base leading-relaxed">
+      <div className="space-y-5 text-gray-300 font-body text-base leading-relaxed">
         {content.map((p, i) => <p key={i}>{p}</p>)}
       </div>
     </article>
@@ -74,7 +77,7 @@ function Sidebar({ otherArticles }: { otherArticles: typeof articles }) {
   return (
     <aside className="space-y-8">
       {/* CTA */}
-      <div className="bg-black rounded-lg p-6 text-center">
+      <div className="card-dark-glass rounded p-6 text-center">
         <h3 className="font-heading text-lg text-white mb-3">Precisa de Orientação?</h3>
         <p className="text-gray-400 text-sm font-body mb-4">Fale com um advogado especialista.</p>
         <a
@@ -90,16 +93,16 @@ function Sidebar({ otherArticles }: { otherArticles: typeof articles }) {
       {/* Other articles */}
       {otherArticles.length > 0 && (
         <div>
-          <h3 className="font-heading text-lg mb-4 text-foreground">Outros Artigos</h3>
+          <h3 className="font-heading text-lg mb-4 text-white">Outros Artigos</h3>
           <div className="space-y-3">
             {otherArticles.map((a) => (
               <Link
                 key={a.slug}
                 to={`/artigos/${a.slug}`}
-                className="block p-3 rounded border border-border hover:border-primary/30 transition-colors duration-200"
+                className="block p-3 rounded card-dark-glass"
               >
                 <span className="text-xs text-primary font-body">{a.category}</span>
-                <h4 className="text-sm font-body text-foreground leading-tight mt-1">{a.title}</h4>
+                <h4 className="text-sm font-body text-gray-300 leading-tight mt-1">{a.title}</h4>
               </Link>
             ))}
           </div>
@@ -108,5 +111,3 @@ function Sidebar({ otherArticles }: { otherArticles: typeof articles }) {
     </aside>
   );
 }
-
-

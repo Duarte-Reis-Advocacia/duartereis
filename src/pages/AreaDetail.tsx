@@ -4,6 +4,7 @@ import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP = "https://wa.me/5511992930589";
@@ -89,9 +90,9 @@ export default function AreaDetail() {
     return (
       <PageTransition>
         <Header />
-        <div className="min-h-screen flex items-center justify-center pt-20">
+        <div className="min-h-screen flex items-center justify-center pt-20 bg-[#0a0a0a]">
           <div className="text-center">
-            <h1 className="font-heading text-3xl mb-4">Área não encontrada</h1>
+            <h1 className="font-heading text-3xl mb-4 text-white">Área não encontrada</h1>
             <Link to="/areas-de-atuacao" className="text-primary hover:underline">Ver todas as áreas</Link>
           </div>
         </div>
@@ -115,16 +116,20 @@ export default function AreaDetail() {
           </div>
         </section>
 
+        <GradientDivider variant="gold-accent" />
+
         {/* Content */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-[#0a0a0a]">
           <div className="container mx-auto px-4 max-w-5xl">
             <IntroSection text={area.intro} />
             <TopicsGrid topics={area.topics} />
           </div>
         </section>
 
+        <GradientDivider variant="gold-accent" />
+
         {/* CTA */}
-        <section className="py-16 md:py-24 bg-black">
+        <section className="py-16 md:py-24" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
           <div className="container mx-auto px-4 text-center max-w-2xl">
             <h2 className="font-heading text-2xl md:text-3xl text-white mb-4">{area.cta}</h2>
             <div className="flex justify-center mb-8">
@@ -134,7 +139,7 @@ export default function AreaDetail() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded-lg text-lg font-bold hover:bg-gold-dark transition-colors duration-200"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded text-lg font-bold hover:bg-gold-dark transition-colors duration-200"
             >
               <MessageCircle size={22} /> Falar pelo WhatsApp
             </a>
@@ -151,7 +156,7 @@ function IntroSection({ text }: { text: string }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <div ref={ref} className={`mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-      <p className="text-muted-foreground font-body text-base leading-relaxed max-w-3xl mx-auto text-center">{text}</p>
+      <p className="text-gray-300 font-body text-base leading-relaxed max-w-3xl mx-auto text-center">{text}</p>
     </div>
   );
 }
@@ -171,14 +176,14 @@ function TopicCard({ title, text, delay }: { title: string; text: string; delay:
   return (
     <div
       ref={ref}
-      className={`bg-secondary/50 border border-border rounded-lg p-6 transition-all duration-700 hover:border-primary/30 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      className={`card-dark-glass p-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="flex items-start gap-3">
-        <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+        <span className="w-0.5 h-full min-h-[40px] bg-primary shrink-0 rounded" />
         <div>
-          <h3 className="font-heading text-base text-foreground mb-2">{title}</h3>
-          <p className="text-muted-foreground text-sm font-body leading-relaxed">{text}</p>
+          <h3 className="font-heading text-base text-primary mb-2">{title}</h3>
+          <p className="text-gray-400 text-sm font-body leading-relaxed">{text}</p>
         </div>
       </div>
     </div>

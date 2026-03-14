@@ -21,17 +21,17 @@ function BenefitCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; tit
       <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
         <Icon size={26} className="text-primary" />
       </div>
-      <h3 className="font-heading text-lg mb-2 text-foreground">{title}</h3>
-      <p className="text-muted-foreground text-sm font-body">{text}</p>
+      <h3 className="font-heading text-lg mb-2 text-white">{title}</h3>
+      <p className="text-gray-400 text-sm font-body">{text}</p>
     </div>
   );
 }
 
 export default function WhyUs() {
   return (
-    <section className="py-20 md:py-28 bg-secondary">
+    <section className="py-20 md:py-28 bg-[#111111]">
       <div className="container mx-auto px-4">
-        <SectionHeading title="Por Que Nos Escolher" />
+        <SectionHeading title="Por Que Nos Escolher" light />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((b, i) => (
             <BenefitCard key={b.title} {...b} delay={i * 100} />

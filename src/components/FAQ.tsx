@@ -28,17 +28,17 @@ const faqs = [
 export default function FAQ() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section id="faq" className="py-20 md:py-28 bg-background">
+    <section id="faq" className="py-20 md:py-28 bg-[#0a0a0a]">
       <div className="container mx-auto px-4 max-w-3xl">
-        <SectionHeading title="Dúvidas Frequentes" />
+        <SectionHeading title="Dúvidas Frequentes" light />
         <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-6 bg-secondary/50">
-                <AccordionTrigger className="text-left font-body font-medium text-foreground hover:no-underline py-5">
+              <AccordionItem key={i} value={`faq-${i}`} className="card-dark-glass rounded px-6">
+                <AccordionTrigger className="text-left font-body font-medium text-white hover:no-underline py-5">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground font-body text-sm leading-relaxed pb-5">
+                <AccordionContent className="text-gray-400 font-body text-sm leading-relaxed pb-5">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
