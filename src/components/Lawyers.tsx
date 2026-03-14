@@ -41,8 +41,10 @@ function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0
 
 export default function Lawyers() {
   return (
-    <section id="advogados" className="py-20 md:py-28 bg-[#0a0a0a]">
-      <div className="container mx-auto px-4">
+    <section id="advogados" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to right, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)' }}>
+      {/* Two spotlights — one per lawyer */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 25% 60%, rgba(197,152,60,0.06) 0%, transparent 40%), radial-gradient(ellipse at 75% 60%, rgba(197,152,60,0.06) 0%, transparent 40%)' }} />
+      <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Nossos Advogados" light />
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {lawyers.map((l, i) => (

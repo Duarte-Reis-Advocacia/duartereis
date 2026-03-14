@@ -29,7 +29,7 @@ function BenefitCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; tit
 
 export default function WhyUs() {
   return (
-    <section className="py-20 md:py-28 bg-[#111111]">
+    <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #111111 0%, #0d0d0d 50%, #111111 100%)' }}>
       <div className="container mx-auto px-4">
         <SectionHeading title="Por Que Nos Escolher" light />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

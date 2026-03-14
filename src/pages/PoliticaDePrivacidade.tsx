@@ -128,7 +128,8 @@ export default function PoliticaDePrivacidade() {
           </div>
         </section>
 
-        <section className="py-12 md:py-20 bg-background">
+        <div className="h-[60px]" style={{ background: "linear-gradient(to bottom, #000000, #fafafa)" }} />
+        <section className="py-12 md:py-20 bg-[#fafafa]">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[240px_1fr] gap-12 max-w-5xl mx-auto">
               {/* Sticky index */}
@@ -138,7 +139,7 @@ export default function PoliticaDePrivacidade() {
                     <a
                       key={s.id}
                       href={`#${s.id}`}
-                      className="block text-sm text-muted-foreground font-body hover:text-primary transition-colors duration-200 py-1"
+                      className="block text-sm text-gray-500 font-body hover:text-primary transition-colors duration-200 py-1"
                     >
                       {s.title}
                     </a>
@@ -150,14 +151,15 @@ export default function PoliticaDePrivacidade() {
               <div className="space-y-10">
                 {sections.map((s) => (
                   <div key={s.id} id={s.id} className="scroll-mt-24">
-                    <h2 className="font-heading text-xl md:text-2xl text-foreground mb-4">{s.title}</h2>
-                    <p className="text-muted-foreground font-body text-sm leading-relaxed whitespace-pre-line">{s.content}</p>
+                    <h2 className="font-heading text-xl md:text-2xl text-gray-900 mb-4">{s.title}</h2>
+                    <p className="text-gray-600 font-body text-sm leading-relaxed whitespace-pre-line">{s.content}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
+        <div className="h-[60px]" style={{ background: "linear-gradient(to bottom, #fafafa, #000000)" }} />
       </main>
       <Footer />
       <WhatsAppButton />

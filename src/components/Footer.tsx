@@ -16,7 +16,7 @@ const LEGAL = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-12" style={{ borderTop: "1px solid rgba(197, 152, 60, 0.2)" }}>
+    <footer className="py-12" style={{ background: 'linear-gradient(to bottom, #0a0a0a 0%, #000000 100%)', borderTop: '1px solid rgba(197, 152, 60, 0.15)' }}>
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-10">
         <div>
           <img src="/logo.jpeg" alt="Duarte Reis Advogados" className="h-12 w-auto mb-4" loading="lazy" />

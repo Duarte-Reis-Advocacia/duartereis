@@ -19,7 +19,19 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/hero-bg.jpg')", transform: `translateY(${offsetY}px)` }}
       />
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Multi-layer overlay: directional gradient + golden warmth */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: [
+            'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.15) 100%)',
+            'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 40%, rgba(10,6,0,0.7) 100%)',
+            'radial-gradient(ellipse at 15% 90%, rgba(197,152,60,0.12) 0%, transparent 50%)',
+          ].join(', '),
+        }}
+      />
+      {/* Bottom fade into next section */}
+      <div className="absolute bottom-0 w-full h-[120px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0a0a0a)' }} />
 
       <div className="relative z-10 container mx-auto px-4 py-32 md:py-40 text-center">
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]">
