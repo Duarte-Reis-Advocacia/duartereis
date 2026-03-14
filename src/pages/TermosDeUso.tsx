@@ -71,7 +71,7 @@ export default function TermosDeUso() {
           </div>
         </section>
 
-        <div className="h-[80px]" style={{ background: "linear-gradient(to bottom, #000000, #fafafa)" }} />
+        <div className="h-[60px]" style={{ background: "linear-gradient(to bottom, #000000, #fafafa)" }} />
 
         <section className="py-12 md:py-20 bg-[#fafafa]">
           <div className="container mx-auto px-4">
