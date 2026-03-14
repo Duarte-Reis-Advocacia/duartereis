@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
+import { Link } from "react-router-dom";
 
 const lawyers = [
   {
@@ -7,21 +8,24 @@ const lawyers = [
     role: "Sócio Fundador · Direito do Trabalho",
     initials: "LD",
     bio: "Advogado especialista em Direito do Trabalho. Sócio fundador com mais de 25 anos de atuação em defesa de trabalhadores e empresas. Atendimento estratégico e humanizado.",
+    href: "/advogados/dr-laefo-duarte",
   },
   {
     name: "Dra. Cristiane Reis",
     role: "Sócia · Trabalho, Família e Consumidor",
     initials: "CR",
     bio: "Advogada com vasta experiência em Direito do Trabalho, Família e Consumidor. Parceira de carreira e irmã, representa o compromisso familiar e ético que guia o escritório desde o início.",
+    href: "/advogados/dra-cristiane-reis",
   },
 ];
 
-function LawyerCard({ name, role, initials, bio, delay }: typeof lawyers[0] & { delay: number }) {
+function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0] & { delay: number }) {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <div
-      ref={ref}
-      className={`bg-black border border-white/10 rounded-lg p-8 md:p-10 text-center transition-all duration-700 hover:border-primary/40 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    <Link
+      to={href}
+      ref={ref as any}
+      className={`block bg-black border border-white/10 rounded-lg p-8 md:p-10 text-center transition-all duration-700 hover:border-primary/40 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
@@ -30,7 +34,8 @@ function LawyerCard({ name, role, initials, bio, delay }: typeof lawyers[0] & { 
       <h3 className="font-heading text-xl text-white mb-1">{name}</h3>
       <p className="text-primary text-sm font-body mb-4">{role}</p>
       <p className="text-gray-400 text-sm font-body leading-relaxed">{bio}</p>
-    </div>
+      <span className="inline-block mt-4 text-primary text-sm font-body hover:underline">Ver perfil →</span>
+    </Link>
   );
 }
 

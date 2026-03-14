@@ -1,11 +1,17 @@
 import { Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const NAV = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Especialidades", href: "#especialidades" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Especialidades", href: "/#especialidades" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contato", href: "/#contato" },
+];
+
+const LEGAL = [
+  { label: "Termos de Uso", href: "/termos-de-uso" },
+  { label: "Política de Privacidade", href: "/politica-de-privacidade" },
 ];
 
 export default function Footer() {
@@ -25,11 +31,18 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          <ul className="space-y-2 mt-4 pt-4 border-t border-white/5">
+            {LEGAL.map((n) => (
+              <li key={n.href}>
+                <Link to={n.href} className="text-gray-400 text-sm font-body hover:text-primary transition-colors duration-200">{n.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <h4 className="font-heading text-sm text-white mb-4 tracking-wider">CONTATO</h4>
           <p className="text-gray-400 text-sm font-body mb-1">(11) 9 9293-0589</p>
-          <p className="text-gray-400 text-sm font-body mb-1">laefo@duartereisadvogados.com.br</p>
+          <p className="text-gray-400 text-sm font-body mb-1">contato@duartereisadvogados.com.br</p>
           <p className="text-gray-400 text-sm font-body mb-4">Av. Paes de Barros, 3399 - Conj. 23/24, Mooca - SP</p>
           <div className="flex gap-3">
             <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-white/10 transition-colors duration-200">
