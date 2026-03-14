@@ -109,4 +109,4 @@ function Sidebar({ otherArticles }: { otherArticles: typeof articles }) {
   );
 }
 
-const WHATSAPP = "https://wa.me/5511992930589";
+
