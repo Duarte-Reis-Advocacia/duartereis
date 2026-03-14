@@ -11,7 +11,7 @@ const services = [
 export default function OtherServices() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section ref={ref} className="py-16 bg-black" style={{ borderTop: "1px solid rgba(197, 152, 60, 0.15)", borderBottom: "1px solid rgba(197, 152, 60, 0.15)" }}>
+    <section ref={ref} className="py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #12100a 50%, #0a0a0a 100%)', borderTop: "1px solid rgba(197, 152, 60, 0.15)", borderBottom: "1px solid rgba(197, 152, 60, 0.15)" }}>
       <div className={`container mx-auto px-4 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
         <h2 className="font-heading text-2xl md:text-3xl text-white mb-8">Atuamos Também em</h2>
         <div className="flex flex-wrap justify-center gap-4">

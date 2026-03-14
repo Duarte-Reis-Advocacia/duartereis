@@ -5,9 +5,17 @@ const WHATSAPP = "https://wa.me/5511992930589";
 export default function About() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-[#0a0a0a] relative overflow-hidden">
-      {/* Decorative gold radial */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none" style={{ background: "radial-gradient(ellipse at top right, rgba(197, 152, 60, 0.06) 0%, transparent 60%)" }} />
+    <section
+      id="sobre"
+      className="py-20 md:py-28 relative overflow-hidden"
+      style={{
+        background: [
+          'radial-gradient(ellipse at 80% 50%, rgba(255,248,220,0.04) 0%, transparent 55%)',
+          'radial-gradient(ellipse at 10% 20%, rgba(197,152,60,0.05) 0%, transparent 40%)',
+          '#0d0d0d',
+        ].join(', '),
+      }}
+    >
       <div ref={ref} className={`container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="rounded overflow-hidden shadow-2xl">
           <img src="/about-bg.jpg" alt="Interior do escritório Duarte Reis" className="w-full h-[400px] object-cover" loading="lazy" />

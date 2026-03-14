@@ -28,7 +28,7 @@ const faqs = [
 export default function FAQ() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section id="faq" className="py-20 md:py-28 bg-[#0a0a0a]">
+    <section id="faq" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%)' }}>
       <div className="container mx-auto px-4 max-w-3xl">
         <SectionHeading title="Dúvidas Frequentes" light />
         <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

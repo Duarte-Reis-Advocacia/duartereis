@@ -13,13 +13,15 @@ export default function CredentialsBar() {
   return (
     <section
       ref={ref}
-      className="py-8"
+      className="py-8 relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%)",
-        borderTop: "1px solid rgba(197, 152, 60, 0.2)",
-        borderBottom: "1px solid rgba(197, 152, 60, 0.2)",
+        background: "linear-gradient(135deg, #0a0a0a 0%, #14100a 35%, #1a1208 50%, #14100a 65%, #0a0a0a 100%)",
+        borderTop: "1px solid rgba(197, 152, 60, 0.25)",
+        borderBottom: "1px solid rgba(197, 152, 60, 0.25)",
       }}
     >
+      {/* Radial glow from above */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% -20%, rgba(197,152,60,0.08) 0%, transparent 60%)' }} />
       <div className={`container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
         {items.map((item, idx) => (
           <div key={item.text} className="flex flex-col items-center text-center gap-2 relative">

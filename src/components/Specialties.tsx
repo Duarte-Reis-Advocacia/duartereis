@@ -49,8 +49,10 @@ function Card({ icon: Icon, title, text, delay }: { icon: typeof ShieldCheck; ti
 
 export default function Specialties() {
   return (
-    <section id="especialidades" className="py-20 md:py-28 bg-[#0a0a0a]">
-      <div className="container mx-auto px-4">
+    <section id="especialidades" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #111111 0%, #0d0d0d 40%, #111111 100%)' }}>
+      {/* Stage light from above */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(197,152,60,0.07) 0%, transparent 55%)' }} />
+      <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Defendemos Quem Mais Precisa" subtitle="Atuamos com foco em três frentes do Direito Trabalhista que mais impactam a vida dos trabalhadores." light />
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((c, i) => (

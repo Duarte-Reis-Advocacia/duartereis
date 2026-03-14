@@ -6,7 +6,9 @@ const WHATSAPP = "https://wa.me/5511992930589";
 export default function CTAFinal() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section id="contato" className="py-20 md:py-28 relative overflow-hidden" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
+    <section id="contato" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #0d0800 30%, #1a1000 50%, #0d0800 70%, #000000 100%)' }}>
+      {/* Spot light on CTA */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(197,152,60,0.12) 0%, rgba(197,152,60,0.04) 30%, transparent 60%)' }} />
       <div ref={ref} className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mb-4">
           Seus Direitos Não Podem Esperar

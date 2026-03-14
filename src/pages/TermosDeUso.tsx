@@ -104,7 +104,7 @@ export default function TermosDeUso() {
           </div>
         </section>
 
-        <div className="h-[80px]" style={{ background: "linear-gradient(to bottom, #fafafa, #000000)" }} />
+        <div className="h-[60px]" style={{ background: "linear-gradient(to bottom, #fafafa, #000000)" }} />
       </main>
       <Footer />
       <WhatsAppButton />
