@@ -151,8 +151,8 @@ export default function PoliticaDePrivacidade() {
               <div className="space-y-10">
                 {sections.map((s) => (
                   <div key={s.id} id={s.id} className="scroll-mt-24">
-                    <h2 className="font-heading text-xl md:text-2xl text-foreground mb-4">{s.title}</h2>
-                    <p className="text-muted-foreground font-body text-sm leading-relaxed whitespace-pre-line">{s.content}</p>
+                    <h2 className="font-heading text-xl md:text-2xl text-gray-900 mb-4">{s.title}</h2>
+                    <p className="text-gray-600 font-body text-sm leading-relaxed whitespace-pre-line">{s.content}</p>
                   </div>
                 ))}
               </div>
