@@ -128,7 +128,8 @@ export default function PoliticaDePrivacidade() {
           </div>
         </section>
 
-        <section className="py-12 md:py-20 bg-background">
+        <div className="h-[60px]" style={{ background: "linear-gradient(to bottom, #000000, #fafafa)" }} />
+        <section className="py-12 md:py-20 bg-[#fafafa]">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[240px_1fr] gap-12 max-w-5xl mx-auto">
               {/* Sticky index */}
