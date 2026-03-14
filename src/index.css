@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 97%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 38 55% 50%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 40 54% 50%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 38 55% 50%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 40 54% 50%;
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 38 55% 50%;
-    --radius: 0.5rem;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 40 54% 50%;
+    --radius: 0.25rem;
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 99%;
-    --sidebar-primary: 38 55% 50%;
+    --sidebar-primary: 40 54% 50%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 99%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 38 55% 50%;
+    --sidebar-ring: 40 54% 50%;
   }
 
   .dark {
@@ -41,19 +41,19 @@
     --card-foreground: 0 0% 99%;
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 99%;
-    --primary: 38 55% 50%;
+    --primary: 40 54% 50%;
     --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 99%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
-    --accent: 38 55% 50%;
+    --accent: 40 54% 50%;
     --accent-foreground: 0 0% 0%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 38 55% 50%;
+    --ring: 40 54% 50%;
   }
 }
 
@@ -80,4 +80,31 @@
   .font-body {
     font-family: 'Inter', sans-serif;
   }
+}
+
+/* Gradient dividers */
+.divider-dark-to-light {
+  background: linear-gradient(to bottom, #0a0a0a, #111111);
+  height: 100px;
+}
+.divider-light-to-dark {
+  background: linear-gradient(to bottom, #111111, #0a0a0a);
+  height: 100px;
+}
+.divider-gold-accent {
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%);
+  height: 80px;
+}
+
+/* Dark glass card */
+.card-dark-glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(197, 152, 60, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-dark-glass:hover {
+  border-color: rgba(197, 152, 60, 0.5);
+  box-shadow: 0 8px 32px rgba(197, 152, 60, 0.1);
 }

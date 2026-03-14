@@ -4,6 +4,7 @@ import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { LucideIcon } from "lucide-react";
 
@@ -20,13 +21,13 @@ function AreaCard({ icon: Icon, title, desc, href, delay }: { icon: LucideIcon; 
     <Link
       to={href}
       ref={ref as any}
-      className={`block bg-black border border-white/10 rounded-lg p-8 text-center transition-all duration-700 hover:border-primary/40 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`block card-dark-glass p-8 text-center transition-all duration-700 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
         <Icon size={28} className="text-primary" />
       </div>
-      <h3 className="font-heading text-xl text-white mb-3">{title}</h3>
+      <h3 className="font-heading text-xl text-primary mb-3">{title}</h3>
       <p className="text-gray-400 text-sm font-body leading-relaxed mb-4">{desc}</p>
       <span className="text-primary text-sm font-body">Saiba mais →</span>
     </Link>
@@ -50,7 +51,9 @@ export default function AreasDeAtuacao() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-black">
+        <GradientDivider variant="gold-accent" />
+
+        <section className="py-16 md:py-24 bg-[#0a0a0a]">
           <div className="container mx-auto px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {areas.map((a, i) => (
