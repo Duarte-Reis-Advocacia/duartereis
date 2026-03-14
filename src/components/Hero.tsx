@@ -19,14 +19,14 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/hero-bg.jpg')", transform: `translateY(${offsetY}px)` }}
       />
-      {/* Multi-layer overlay: directional gradient + golden warmth */}
+      {/* Cinematic multi-layer overlay */}
       <div
         className="absolute inset-0"
         style={{
           background: [
-            'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.15) 100%)',
-            'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 40%, rgba(10,6,0,0.7) 100%)',
-            'radial-gradient(ellipse at 15% 90%, rgba(197,152,60,0.12) 0%, transparent 50%)',
+            'linear-gradient(105deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.50) 38%, rgba(0,0,0,0.10) 65%, rgba(0,0,0,0.30) 100%)',
+            'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.20) 35%, transparent 60%)',
+            'radial-gradient(ellipse at 78% 85%, rgba(197,152,60,0.13) 0%, transparent 45%)',
           ].join(', '),
         }}
       />
@@ -48,7 +48,7 @@ export default function Hero() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded font-semibold text-lg hover:bg-gold-light transition-colors duration-200"
+            className="bg-primary text-primary-foreground px-8 py-4 rounded font-semibold text-lg hover:bg-gold-light transition-colors duration-200 animate-[subtle-pulse_2.8s_ease-in-out_infinite]"
           >
             Consulta Gratuita pelo WhatsApp
           </a>
