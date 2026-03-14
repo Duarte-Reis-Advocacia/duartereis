@@ -1,3 +1,4 @@
+import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CredentialsBar from "@/components/CredentialsBar";
@@ -13,7 +14,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <>
+    <PageTransition>
       <Header />
       <main>
         <Hero />
@@ -28,7 +29,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </PageTransition>
   );
 };
 
