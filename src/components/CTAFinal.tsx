@@ -6,24 +6,30 @@ const WHATSAPP = "https://wa.me/5511992930589";
 export default function CTAFinal() {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <section id="contato" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #0d0800 30%, #1a1000 50%, #0d0800 70%, #000000 100%)' }}>
-      {/* Spot light on CTA */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(197,152,60,0.12) 0%, rgba(197,152,60,0.04) 30%, transparent 60%)' }} />
+    <section
+      id="contato"
+      className="py-20 md:py-28 relative overflow-hidden"
+      style={{
+        background: '#0a0a0a',
+        backgroundImage: 'radial-gradient(ellipse 60% 60% at 50% 40%, rgba(197,152,60,0.09) 0%, transparent 65%)',
+      }}
+    >
       <div ref={ref} className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mb-4">
           Seus Direitos Não Podem Esperar
         </h2>
+        {/* Animated gold underline */}
         <div className="flex justify-center mb-6">
-          <span className={`block h-0.5 bg-primary origin-left transition-transform duration-700 delay-300 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ width: "60px" }} />
+          <span className={`block h-0.5 bg-gradient-to-r from-primary to-transparent origin-left transition-transform duration-700 delay-300 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ width: "60px" }} />
         </div>
-        <p className="text-gray-300 text-lg mb-10 font-body">
+        <p className={`text-gray-300 text-lg mb-10 font-body transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           Entre em contato agora e receba uma avaliação do seu caso.
         </p>
         <a
           href={WHATSAPP}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded text-lg font-bold hover:bg-gold-dark transition-colors duration-200 shadow-lg shadow-primary/20"
+          className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded text-lg font-bold hover:bg-gold-dark transition-all duration-500 delay-200 shadow-lg shadow-primary/20 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
           <MessageCircle size={24} /> Falar pelo WhatsApp Agora
         </a>

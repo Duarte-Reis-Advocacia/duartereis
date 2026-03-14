@@ -25,7 +25,7 @@ function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0
     <Link
       to={href}
       ref={ref as any}
-      className={`block card-dark-glass p-8 md:p-10 text-center transition-all duration-700 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`block card-dark-glass p-8 md:p-10 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
@@ -41,9 +41,17 @@ function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0
 
 export default function Lawyers() {
   return (
-    <section id="advogados" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(to right, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)' }}>
-      {/* Two spotlights — one per lawyer */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 25% 60%, rgba(197,152,60,0.06) 0%, transparent 40%), radial-gradient(ellipse at 75% 60%, rgba(197,152,60,0.06) 0%, transparent 40%)' }} />
+    <section
+      id="advogados"
+      className="py-20 md:py-28 relative overflow-hidden"
+      style={{
+        background: '#0d0d0d',
+        backgroundImage: [
+          'radial-gradient(ellipse 30% 50% at 30% 60%, rgba(197,152,60,0.05) 0%, transparent 60%)',
+          'radial-gradient(ellipse 30% 50% at 70% 60%, rgba(197,152,60,0.05) 0%, transparent 60%)',
+        ].join(', '),
+      }}
+    >
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Nossos Advogados" light />
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

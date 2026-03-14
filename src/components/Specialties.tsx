@@ -27,10 +27,10 @@ function Card({ icon: Icon, title, text, delay }: { icon: typeof ShieldCheck; ti
   return (
     <div
       ref={ref}
-      className={`card-dark-glass p-8 flex flex-col transition-all duration-700 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`card-dark-glass p-8 flex flex-col transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+      <div className={`w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: `${delay + 50}ms` }}>
         <Icon size={28} className="text-primary" />
       </div>
       <h3 className="font-heading text-xl text-primary mb-4">{title}</h3>
@@ -49,14 +49,19 @@ function Card({ icon: Icon, title, text, delay }: { icon: typeof ShieldCheck; ti
 
 export default function Specialties() {
   return (
-    <section id="especialidades" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #111111 0%, #0d0d0d 40%, #111111 100%)' }}>
-      {/* Stage light from above */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(197,152,60,0.07) 0%, transparent 55%)' }} />
+    <section
+      id="especialidades"
+      className="py-20 md:py-28 relative overflow-hidden"
+      style={{
+        background: '#0f0f0f',
+        backgroundImage: 'radial-gradient(ellipse 80% 40% at 50% 0%, rgba(197,152,60,0.06) 0%, transparent 70%)',
+      }}
+    >
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Defendemos Quem Mais Precisa" subtitle="Atuamos com foco em três frentes do Direito Trabalhista que mais impactam a vida dos trabalhadores." light />
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((c, i) => (
-            <Card key={c.title} {...c} delay={i * 150} />
+            <Card key={c.title} {...c} delay={i * 120} />
           ))}
         </div>
       </div>

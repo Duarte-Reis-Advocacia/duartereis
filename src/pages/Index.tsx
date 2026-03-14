@@ -11,7 +11,6 @@ import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import GradientDivider from "@/components/GradientDivider";
 
 const Index = () => {
   return (
@@ -20,18 +19,12 @@ const Index = () => {
       <main>
         <Hero />
         <CredentialsBar />
-        <GradientDivider variant="gold-accent" />
         <Specialties />
-        <GradientDivider variant="gold-accent" />
         <About />
-        <GradientDivider variant="gold-accent" />
         <Lawyers />
         <OtherServices />
-        <GradientDivider variant="gold-accent" />
         <WhyUs />
-        <GradientDivider variant="gold-accent" />
         <FAQ />
-        <GradientDivider variant="gold-accent" />
         <CTAFinal />
       </main>
       <Footer />
