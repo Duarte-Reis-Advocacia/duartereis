@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { articles } from "./Artigos";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+const WA_LINK = "https://wa.me/5511992930589";
 
 export default function ArtigoDetail() {
   const { slug } = useParams<{ slug: string }>();
