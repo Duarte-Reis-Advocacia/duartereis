@@ -139,7 +139,7 @@ export default function PoliticaDePrivacidade() {
                     <a
                       key={s.id}
                       href={`#${s.id}`}
-                      className="block text-sm text-muted-foreground font-body hover:text-primary transition-colors duration-200 py-1"
+                      className="block text-sm text-gray-500 font-body hover:text-primary transition-colors duration-200 py-1"
                     >
                       {s.title}
                     </a>
