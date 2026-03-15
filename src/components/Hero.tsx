@@ -25,25 +25,25 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 28%, rgba(0,0,0,0.38) 52%, rgba(0,0,0,0.10) 72%, rgba(0,0,0,0.05) 100%),
-            linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.05) 65%, rgba(0,0,0,0.50) 100%)
+            linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.18) 68%, rgba(0,0,0,0.08) 100%),
+            linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.08) 65%, rgba(0,0,0,0.55) 100%)
           `,
         }}
       />
       {/* Bottom fade into next section */}
       <div className="absolute bottom-0 w-full h-[120px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0a0a0a)' }} />
 
-      <div className="relative z-10 container mx-auto px-4 py-32 md:py-40 text-center">
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]" style={{ fontWeight: 300, letterSpacing: '0.04em' }}>
+      <div className="relative z-10 container mx-auto px-4 py-32 md:py-40 text-left max-w-3xl">
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]" style={{ fontWeight: 300, letterSpacing: '0.04em', textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9)' }}>
           Seus Direitos Trabalhistas,
           <br />
           <span className="text-primary">Defendidos com Firmeza.</span>
         </h1>
-        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300 }}>
+        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300, textShadow: '0 1px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)' }}>
           Desde 1999, o escritório Duarte Reis representa trabalhadores em São Paulo com ética, estratégia e resultados comprovados.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-[fade-in_1.2s_ease-out]">
+        <div className="flex flex-col sm:flex-row gap-4 justify-start mb-12 animate-[fade-in_1.2s_ease-out]">
           <a
             href={WHATSAPP}
             target="_blank"
@@ -55,16 +55,17 @@ export default function Hero() {
           </a>
           <Link
             to="/artigos"
-            className="border-2 border-white text-white px-8 py-4 rounded font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+            className="border-2 border-white text-white px-8 py-4 rounded font-semibold backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.35)', textShadow: '0 1px 6px rgba(0,0,0,0.6)' }}
           >
             Leia Nossos Artigos
           </Link>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-gray-300 text-sm font-body animate-[fade-in_1.4s_ease-out]" style={{ letterSpacing: '0.05em' }}>
-          <span className="flex items-center gap-2"><Shield size={18} className="text-primary" /> +25 Anos de Experiência</span>
-          <span className="flex items-center gap-2"><Monitor size={18} className="text-primary" /> Atendimento Online e Presencial</span>
-          <span className="flex items-center gap-2"><MapPin size={18} className="text-primary" /> Mooca, São Paulo</span>
+        <div className="flex flex-wrap justify-start gap-6 md:gap-10 text-gray-300 text-sm font-body animate-[fade-in_1.4s_ease-out]" style={{ letterSpacing: '0.05em' }}>
+          <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><Shield size={18} className="text-primary" /> +25 Anos de Experiência</span>
+          <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><Monitor size={18} className="text-primary" /> Atendimento Online e Presencial</span>
+          <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><MapPin size={18} className="text-primary" /> Mooca, São Paulo</span>
         </div>
       </div>
     </section>
