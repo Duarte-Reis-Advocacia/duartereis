@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Parallax BG */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg-new.jpg')", transform: `translateY(${offsetY}px)` }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", transform: `translateY(${offsetY}px)` }}
       />
       {/* Cinematic multi-layer overlay */}
       <div

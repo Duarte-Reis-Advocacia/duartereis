@@ -17,8 +17,9 @@ export default function About() {
       }}
     >
       <div ref={ref} className={`container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <div className="rounded-md overflow-hidden shadow-2xl">
-          <img src="/about-bg-new.jpg" alt="Interior do escritório Duarte Reis" className="w-full h-[400px] object-cover object-center" loading="lazy" />
+        <div className="rounded-md overflow-hidden shadow-2xl relative">
+          <img src="/about-bg.jpg" alt="Sala de reuniões do escritório Duarte Reis" className="w-full h-[400px] object-cover object-center" loading="lazy" />
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.35)' }} />
         </div>
         <div>
           <span className={`inline-block text-primary text-[11px] font-body tracking-[0.2em] uppercase origin-left transition-transform duration-500 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ fontWeight: 300 }}>● DESDE 1999</span>

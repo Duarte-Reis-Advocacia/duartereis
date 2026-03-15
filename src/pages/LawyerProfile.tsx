@@ -66,8 +66,10 @@ export default function LawyerProfile() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-black pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="container mx-auto px-4 text-center">
+        <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lawyer-bg.jpg')" }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%)' }} />
+          <div className="container mx-auto px-4 text-center relative z-10">
             <div className="w-28 h-28 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
               <span className="font-heading text-3xl text-primary">{lawyer.initials}</span>
             </div>
