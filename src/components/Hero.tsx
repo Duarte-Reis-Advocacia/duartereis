@@ -55,7 +55,8 @@ export default function Hero() {
           </a>
           <Link
             to="/artigos"
-            className="border-2 border-white text-white px-8 py-4 rounded font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+            className="border-2 border-white text-white px-8 py-4 rounded font-semibold backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.35)', textShadow: '0 1px 6px rgba(0,0,0,0.6)' }}
           >
             Leia Nossos Artigos
           </Link>
