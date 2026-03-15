@@ -4,7 +4,6 @@ import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP = "https://wa.me/5511992930589";
@@ -72,8 +71,8 @@ export default function LawyerProfile() {
             <div className="w-28 h-28 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
               <span className="font-heading text-3xl text-primary">{lawyer.initials}</span>
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl text-white mb-3">{lawyer.name}</h1>
-            <p className="text-primary text-lg font-body mb-6">{lawyer.subtitle}</p>
+            <h1 className="font-heading text-4xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{lawyer.name}</h1>
+            <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{lawyer.subtitle}</p>
             <div className="flex justify-center mb-8">
               <span className="block h-0.5 w-20 bg-primary" />
             </div>
@@ -82,40 +81,35 @@ export default function LawyerProfile() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded font-semibold hover:bg-primary hover:text-black transition-all duration-200"
+              style={{ borderWidth: '1.5px' }}
             >
               <MessageCircle size={18} /> Agendar Consulta
             </a>
           </div>
         </section>
 
-        <GradientDivider variant="gold-accent" />
-
         {/* Bio */}
-        <section className="py-16 md:py-24 bg-[#0a0a0a]">
+        <section className="py-20 md:py-28 bg-[#0a0a0a]">
           <div className="container mx-auto px-4 max-w-3xl">
             <BiographySection lawyer={lawyer} />
           </div>
         </section>
 
-        <GradientDivider variant="gold-accent" />
-
         {/* Badges */}
-        <section className="py-16 bg-[#111111]">
+        <section className="py-20 bg-[#111111]">
           <div className="container mx-auto px-4 max-w-3xl">
             <BadgesSection badges={lawyer.badges} />
           </div>
         </section>
 
-        <GradientDivider variant="gold-accent" />
-
         {/* Contact CTA */}
-        <section className="py-16 md:py-24" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
+        <section className="py-20 md:py-28" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-heading text-3xl md:text-4xl text-white mb-4">Fale com {lawyer.name.split(" ")[0]} {lawyer.name.split(" ")[1]}</h2>
+            <h2 className="font-heading text-3xl md:text-4xl text-white mb-4" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Fale com {lawyer.name.split(" ")[0]} {lawyer.name.split(" ")[1]}</h2>
             <div className="flex justify-center mb-6">
               <span className="block h-0.5 w-16 bg-primary" />
             </div>
-            <div className="flex flex-wrap justify-center gap-6 text-gray-400 text-sm font-body mb-8">
+            <div className="flex flex-wrap justify-center gap-6 text-gray-400 text-sm font-body mb-8" style={{ fontWeight: 300 }}>
               <span className="flex items-center gap-2"><Phone size={16} className="text-primary" /> (11) 9 9293-0589</span>
               <span className="flex items-center gap-2"><Mail size={16} className="text-primary" /> contato@duartereisadvogados.com.br</span>
             </div>
@@ -140,14 +134,14 @@ function BiographySection({ lawyer }: { lawyer: typeof lawyers[string] }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-      <h2 className="font-heading text-2xl md:text-3xl mb-6 text-primary">Sobre {lawyer.name}</h2>
+      <h2 className="font-heading text-2xl md:text-3xl mb-6 text-primary" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Sobre {lawyer.name}</h2>
       <div className="h-0.5 w-16 bg-primary mb-8" />
-      <div className="space-y-5 text-gray-300 font-body text-sm leading-relaxed">
+      <div className="space-y-5 text-gray-300 font-body text-sm leading-relaxed" style={{ fontWeight: 300 }}>
         {lawyer.bio.map((p, i) => <p key={i}>{p}</p>)}
       </div>
       <div className="mt-8 pt-6" style={{ borderTop: "1px solid rgba(197, 152, 60, 0.2)" }}>
-        <h3 className="font-heading text-lg mb-3 text-white">Formação</h3>
-        <ul className="space-y-1 text-gray-400 font-body text-sm">
+        <h3 className="font-heading text-lg mb-3 text-white" style={{ fontWeight: 500 }}>Formação</h3>
+        <ul className="space-y-1 text-gray-400 font-body text-sm" style={{ fontWeight: 300 }}>
           {lawyer.formation.map((f, i) => (
             <li key={i} className="flex items-start gap-2">
               <span className="w-0.5 h-4 bg-primary mt-0.5 shrink-0 rounded" />
@@ -164,10 +158,10 @@ function BadgesSection({ badges }: { badges: string[] }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-      <h2 className="font-heading text-2xl mb-6 text-white text-center">Áreas de Especialização</h2>
+      <h2 className="font-heading text-2xl mb-6 text-white text-center" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Áreas de Especialização</h2>
       <div className="flex flex-wrap justify-center gap-3">
         {badges.map((b) => (
-          <span key={b} className="card-dark-glass text-primary rounded-full px-5 py-2 text-sm font-body">{b}</span>
+          <span key={b} className="card-dark-glass text-primary rounded-full px-5 py-2 text-sm font-body" style={{ fontWeight: 400 }}>{b}</span>
         ))}
       </div>
     </div>

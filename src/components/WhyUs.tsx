@@ -18,11 +18,11 @@ function BenefitCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; tit
       className={`text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className={`w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: `${delay + 50}ms` }}>
-        <Icon size={26} className="text-primary" />
+      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: `${delay + 50}ms` }}>
+        <Icon size={22} className="text-primary" />
       </div>
-      <h3 className="font-heading text-lg mb-2 text-white">{title}</h3>
-      <p className="text-gray-400 text-sm font-body">{text}</p>
+      <h3 className="font-heading text-lg mb-2 text-white" style={{ fontWeight: 500 }}>{title}</h3>
+      <p className="text-gray-400 text-sm font-body" style={{ fontWeight: 300 }}>{text}</p>
     </div>
   );
 }
@@ -30,7 +30,7 @@ function BenefitCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; tit
 export default function WhyUs() {
   return (
     <section
-      className="py-20 md:py-28 relative overflow-hidden"
+      className="py-24 md:py-32 relative overflow-hidden"
       style={{
         background: '#0f0f0f',
         backgroundImage: 'radial-gradient(ellipse 70% 50% at 50% 30%, rgba(197,152,60,0.04) 0%, transparent 60%)',

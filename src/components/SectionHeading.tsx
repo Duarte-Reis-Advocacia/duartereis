@@ -9,8 +9,11 @@ interface Props {
 export default function SectionHeading({ title, subtitle, light }: Props) {
   const { ref, isVisible } = useScrollReveal();
   return (
-    <div ref={ref} className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}>
-      <h2 className={`font-heading text-3xl md:text-4xl lg:text-5xl mb-4 ${light ? "text-primary" : "text-primary"}`}>
+    <div ref={ref} className={`text-center mb-14 md:mb-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}>
+      <h2
+        className="font-heading text-primary mb-4"
+        style={{ fontWeight: 300, letterSpacing: '0.06em', fontSize: 'clamp(2.2rem, 4vw, 3.5rem)' }}
+      >
         {title}
       </h2>
       {/* Animated gold underline */}
@@ -21,7 +24,7 @@ export default function SectionHeading({ title, subtitle, light }: Props) {
         />
       </div>
       {subtitle && (
-        <p className={`mt-4 text-base md:text-lg max-w-2xl mx-auto transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} ${light ? "text-gray-300" : "text-gray-400"}`}>
+        <p className={`mt-4 text-base md:text-lg max-w-2xl mx-auto transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} ${light ? "text-gray-300" : "text-gray-400"}`} style={{ fontWeight: 300 }}>
           {subtitle}
         </p>
       )}

@@ -66,19 +66,19 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
   }
 }
 
 @layer utilities {
   .font-heading {
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
   }
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
   }
 }
 
@@ -87,7 +87,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(197, 152, 60, 0.15);
   backdrop-filter: blur(4px);
-  border-radius: 4px;
+  border-radius: 6px;
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
               border-color 0.3s ease,
               box-shadow 0.3s ease;
@@ -103,4 +103,25 @@
 @keyframes subtle-pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(197,152,60,0.4); }
   50%       { box-shadow: 0 0 0 8px rgba(197,152,60,0); }
+}
+
+/* Custom scrollbar — Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #C5983C, #A87930);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AA50;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C5983C #0a0a0a;
 }
