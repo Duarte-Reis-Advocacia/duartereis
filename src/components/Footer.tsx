@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="py-14" style={{ background: 'linear-gradient(to bottom, #0a0a0a 0%, #000000 100%)', borderTop: '1px solid rgba(197, 152, 60, 0.15)' }}>
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-10">
         <div>
-          <img src="/logo.jpeg" alt="Duarte Reis Advogados" className="h-12 w-auto mb-4" loading="lazy" />
+          <img src="/logo.png" alt="Duarte Reis Advogados" className="h-12 w-auto mb-4" loading="lazy" />
           <p className="text-gray-500 text-sm font-body" style={{ fontWeight: 300 }}>Advocacia com propósito, tradição e resultado.</p>
         </div>
         <div className="relative">

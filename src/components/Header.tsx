@@ -93,7 +93,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <Link to="/" onClick={() => handleAnchorClick("/#inicio")}>
-          <img src="/logo.jpeg" alt="Duarte Reis Advogados" className="h-10 md:h-14 w-auto" loading="lazy" />
+          <img src="/logo.png" alt="Duarte Reis Advogados" className="h-10 md:h-14 w-auto" loading="lazy" />
         </Link>
 
         {/* Desktop nav */}
