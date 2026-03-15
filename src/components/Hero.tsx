@@ -34,8 +34,9 @@ export default function Hero() {
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Parallax BG */}
       <div
+        ref={heroBgRef}
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: `translateY(${offsetY}px)` }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
       />
       {/* Directional asymmetric overlay */}
       <div
