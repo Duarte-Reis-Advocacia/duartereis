@@ -50,8 +50,8 @@ export default function Hero() {
           </a>
           <Link
             to="/artigos"
-            className="border-2 border-white text-white px-8 py-4 rounded font-semibold backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
-            style={{ backgroundColor: 'rgba(0, 0, 0, 0.35)', textShadow: '0 1px 6px rgba(0,0,0,0.6)' }}
+            className="bg-white text-black px-8 py-4 rounded font-semibold text-lg border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 ease-in-out"
+            style={{ letterSpacing: '0.01em' }}
           >
             Leia Nossos Artigos
           </Link>
