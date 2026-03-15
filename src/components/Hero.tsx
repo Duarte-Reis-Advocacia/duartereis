@@ -34,7 +34,7 @@ export default function Hero() {
           <br />
           <span className="text-primary">Defendidos com Firmeza</span>
         </h1>
-        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300, textShadow: '0 1px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)' }}>
+        <p className="text-gray-300 text-lg md:text-xl max-w-3xl mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300 }}>
           Desde 1999, o escritório Duarte Reis representa trabalhadores em São Paulo com ética, estratégia e resultados comprovados.
         </p>
 
