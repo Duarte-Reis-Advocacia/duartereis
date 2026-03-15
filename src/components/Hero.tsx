@@ -29,10 +29,10 @@ export default function Hero() {
       <div className="absolute bottom-0 w-full h-[120px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0a0a0a)' }} />
 
       <div className="relative z-10 container mx-auto px-4 py-32 md:py-40 text-left max-w-3xl">
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]" style={{ fontWeight: 300, letterSpacing: '0.04em', textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9)' }}>
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]" style={{ fontWeight: 300, letterSpacing: '0.04em' }}>
           Seus Direitos Trabalhistas,
           <br />
-          <span className="text-primary">Defendidos com Firmeza.</span>
+          <span className="text-primary">Defendidos com Firmeza</span>
         </h1>
         <p className="text-gray-300 text-lg md:text-xl max-w-3xl mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300, textShadow: '0 1px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)' }}>
           Desde 1999, o escritório Duarte Reis representa trabalhadores em São Paulo com ética, estratégia e resultados comprovados.
