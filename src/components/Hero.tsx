@@ -17,18 +17,17 @@ export default function Hero() {
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Parallax BG */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", transform: `translateY(${offsetY}px)` }}
+        className="absolute inset-0 bg-cover"
+        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: `translateY(${offsetY}px)` }}
       />
-      {/* Cinematic multi-layer overlay */}
+      {/* Directional asymmetric overlay */}
       <div
         className="absolute inset-0"
         style={{
-          background: [
-            'linear-gradient(105deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.52) 40%, rgba(0,0,0,0.18) 70%, rgba(0,0,0,0.28) 100%)',
-            'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 40%, transparent 65%)',
-            'radial-gradient(ellipse at 78% 85%, rgba(197,152,60,0.13) 0%, transparent 45%)',
-          ].join(', '),
+          background: `
+            linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 28%, rgba(0,0,0,0.38) 52%, rgba(0,0,0,0.10) 72%, rgba(0,0,0,0.05) 100%),
+            linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.05) 65%, rgba(0,0,0,0.50) 100%)
+          `,
         }}
       />
       {/* Bottom fade into next section */}
