@@ -8,6 +8,13 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP = "https://wa.me/5511992930589";
 
+const areaBgImages: Record<string, string> = {
+  "direito-trabalhista": "/area-trabalhista.jpg",
+  "direito-do-consumidor": "/area-consumidor.jpg",
+  "direito-de-familia": "/area-familia.jpg",
+  "reparacao-de-danos": "/area-danos.jpg",
+};
+
 interface AreaData {
   title: string;
   subtitle: string;
