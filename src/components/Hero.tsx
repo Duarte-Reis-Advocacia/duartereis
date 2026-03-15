@@ -25,8 +25,8 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 28%, rgba(0,0,0,0.38) 52%, rgba(0,0,0,0.10) 72%, rgba(0,0,0,0.05) 100%),
-            linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.05) 65%, rgba(0,0,0,0.50) 100%)
+            linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.18) 68%, rgba(0,0,0,0.08) 100%),
+            linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.08) 65%, rgba(0,0,0,0.55) 100%)
           `,
         }}
       />
