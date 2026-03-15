@@ -23,12 +23,7 @@ export default function Hero() {
       {/* Directional asymmetric overlay */}
       <div
         className="absolute inset-0"
-        style={{
-          background: `
-            linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.18) 68%, rgba(0,0,0,0.08) 100%),
-            linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.08) 65%, rgba(0,0,0,0.55) 100%)
-          `,
-        }}
+        style={{ background: 'rgba(0,0,0,0.48)' }}
       />
       {/* Bottom fade into next section */}
       <div className="absolute bottom-0 w-full h-[120px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0a0a0a)' }} />
