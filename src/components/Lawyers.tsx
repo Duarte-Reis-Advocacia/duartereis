@@ -31,9 +31,9 @@ function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0
       <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
         <span className="font-heading text-2xl text-primary">{initials}</span>
       </div>
-      <h3 className="font-heading text-xl text-white mb-1">{name}</h3>
+      <h3 className="font-heading text-xl text-white mb-1" style={{ fontWeight: 500 }}>{name}</h3>
       <p className="text-primary text-sm font-body mb-4">{role}</p>
-      <p className="text-gray-400 text-sm font-body leading-relaxed">{bio}</p>
+      <p className="text-gray-400 text-sm font-body leading-relaxed" style={{ fontWeight: 300 }}>{bio}</p>
       <span className="inline-block mt-4 text-primary text-sm font-body hover:underline">Ver perfil →</span>
     </Link>
   );
@@ -43,7 +43,7 @@ export default function Lawyers() {
   return (
     <section
       id="advogados"
-      className="py-20 md:py-28 relative overflow-hidden"
+      className="py-24 md:py-32 relative overflow-hidden"
       style={{
         background: '#0d0d0d',
         backgroundImage: [

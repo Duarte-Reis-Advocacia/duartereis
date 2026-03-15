@@ -30,7 +30,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-20 md:py-28 relative overflow-hidden"
+      className="py-24 md:py-32 relative overflow-hidden"
       style={{
         background: '#0a0a0a',
         backgroundImage: 'radial-gradient(ellipse 60% 40% at 50% 20%, rgba(197,152,60,0.04) 0%, transparent 60%)',
@@ -44,13 +44,13 @@ export default function FAQ() {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className={`card-dark-glass rounded px-6 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                className={`card-dark-glass rounded-md px-6 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
                 <AccordionTrigger className="text-left font-body font-medium text-white hover:no-underline py-5">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 font-body text-sm leading-relaxed pb-5">
+                <AccordionContent className="text-gray-400 font-body text-sm leading-relaxed pb-5" style={{ fontWeight: 300 }}>
                   {f.a}
                 </AccordionContent>
               </AccordionItem>

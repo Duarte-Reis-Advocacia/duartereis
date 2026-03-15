@@ -4,7 +4,6 @@ import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const WHATSAPP = "https://wa.me/5511992930589";
@@ -106,32 +105,30 @@ export default function AreaDetail() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-black pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="font-heading text-3xl md:text-5xl text-white mb-3">{area.title}</h1>
-            <p className="text-primary text-lg font-body mb-6">{area.subtitle}</p>
+        <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/areas-bg.jpg')" }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%)' }} />
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <h1 className="font-heading text-3xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{area.title}</h1>
+            <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{area.subtitle}</p>
             <div className="flex justify-center">
               <span className="block h-0.5 w-20 bg-primary" />
             </div>
           </div>
         </section>
 
-        <GradientDivider variant="gold-accent" />
-
         {/* Content */}
-        <section className="py-16 md:py-24 bg-[#0a0a0a]">
+        <section className="py-20 md:py-28 bg-[#0a0a0a]">
           <div className="container mx-auto px-4 max-w-5xl">
             <IntroSection text={area.intro} />
             <TopicsGrid topics={area.topics} />
           </div>
         </section>
 
-        <GradientDivider variant="gold-accent" />
-
         {/* CTA */}
-        <section className="py-16 md:py-24" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
+        <section className="py-20 md:py-28" style={{ background: "linear-gradient(180deg, #000000 0%, #0d0800 40%, #000000 100%)" }}>
           <div className="container mx-auto px-4 text-center max-w-2xl">
-            <h2 className="font-heading text-2xl md:text-3xl text-white mb-4">{area.cta}</h2>
+            <h2 className="font-heading text-2xl md:text-3xl text-white mb-4" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{area.cta}</h2>
             <div className="flex justify-center mb-8">
               <span className="block h-0.5 w-16 bg-primary" />
             </div>
@@ -156,7 +153,7 @@ function IntroSection({ text }: { text: string }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <div ref={ref} className={`mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-      <p className="text-gray-300 font-body text-base leading-relaxed max-w-3xl mx-auto text-center">{text}</p>
+      <p className="text-gray-300 font-body text-base leading-relaxed max-w-3xl mx-auto text-center" style={{ fontWeight: 300 }}>{text}</p>
     </div>
   );
 }
@@ -182,8 +179,8 @@ function TopicCard({ title, text, delay }: { title: string; text: string; delay:
       <div className="flex items-start gap-3">
         <span className="w-0.5 h-full min-h-[40px] bg-primary shrink-0 rounded" />
         <div>
-          <h3 className="font-heading text-base text-primary mb-2">{title}</h3>
-          <p className="text-gray-400 text-sm font-body leading-relaxed">{text}</p>
+          <h3 className="font-heading text-base text-primary mb-2" style={{ fontWeight: 500 }}>{title}</h3>
+          <p className="text-gray-400 text-sm font-body leading-relaxed" style={{ fontWeight: 300 }}>{text}</p>
         </div>
       </div>
     </div>

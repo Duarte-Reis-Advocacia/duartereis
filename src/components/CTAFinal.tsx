@@ -8,21 +8,21 @@ export default function CTAFinal() {
   return (
     <section
       id="contato"
-      className="py-20 md:py-28 relative overflow-hidden"
+      className="py-24 md:py-32 relative overflow-hidden"
       style={{
         background: '#0a0a0a',
         backgroundImage: 'radial-gradient(ellipse 60% 60% at 50% 40%, rgba(197,152,60,0.09) 0%, transparent 65%)',
       }}
     >
       <div ref={ref} className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mb-4">
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mb-4" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>
           Seus Direitos Não Podem Esperar
         </h2>
         {/* Animated gold underline */}
         <div className="flex justify-center mb-6">
           <span className={`block h-0.5 bg-gradient-to-r from-primary to-transparent origin-left transition-transform duration-700 delay-300 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ width: "60px" }} />
         </div>
-        <p className={`text-gray-300 text-lg mb-10 font-body transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+        <p className={`text-gray-300 text-lg mb-10 font-body transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ fontWeight: 300 }}>
           Entre em contato agora e receba uma avaliação do seu caso.
         </p>
         <a
@@ -34,7 +34,7 @@ export default function CTAFinal() {
           <MessageCircle size={24} /> Falar pelo WhatsApp Agora
         </a>
 
-        <div className="flex flex-wrap justify-center gap-8 mt-12 text-gray-400 text-sm font-body">
+        <div className="flex flex-wrap justify-center gap-8 mt-12 text-gray-400 text-sm font-body" style={{ fontWeight: 300 }}>
           <span className="flex items-center gap-2"><Phone size={16} className="text-primary" /> (11) 9 9293-0589</span>
           <span className="flex items-center gap-2"><Mail size={16} className="text-primary" /> contato@duartereisadvogados.com.br</span>
           <span className="flex items-center gap-2"><MapPin size={16} className="text-primary" /> Av. Paes de Barros, 3399 - Conj. 23/24, Mooca - São Paulo/SP</span>

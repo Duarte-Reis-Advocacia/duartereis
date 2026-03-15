@@ -7,7 +7,6 @@ const WHATSAPP = "https://wa.me/5511992930589";
 const NAV_ITEMS = [
   { label: "Início", href: "/#inicio", type: "anchor" },
   { label: "Sobre", href: "/#sobre", type: "anchor" },
-  { label: "Especialidades", href: "/#especialidades", type: "anchor" },
   {
     label: "Advogados",
     type: "dropdown",
@@ -26,7 +25,6 @@ const NAV_ITEMS = [
       { label: "Reparação de Danos", href: "/areas-de-atuacao/reparacao-de-danos" },
     ],
   },
-  { label: "Artigos", href: "/artigos", type: "link" },
   { label: "Contato", href: "/#contato", type: "anchor" },
 ];
 
@@ -107,7 +105,8 @@ export default function Header() {
               {item.type === "anchor" && (
                 <button
                   onClick={() => handleAnchorClick(item.href!)}
-                  className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body tracking-[0.08em] font-normal"
+                  className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body uppercase"
+                  style={{ letterSpacing: '0.1em', fontWeight: 400 }}
                 >
                   {item.label}
                 </button>
@@ -117,7 +116,8 @@ export default function Header() {
                 <Link
                   to={item.href!}
                   onClick={handleLinkClick}
-                  className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body tracking-[0.08em] font-normal"
+                  className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body uppercase"
+                  style={{ letterSpacing: '0.1em', fontWeight: 400 }}
                 >
                   {item.label}
                 </Link>
@@ -129,7 +129,10 @@ export default function Header() {
                   onMouseEnter={() => handleDropdownEnter(item.label)}
                   onMouseLeave={handleDropdownLeave}
                 >
-                  <button className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body tracking-[0.08em] font-normal flex items-center gap-1">
+                  <button
+                    className="text-[13px] text-gray-300 hover:text-primary transition-colors duration-200 font-body uppercase flex items-center gap-1"
+                    style={{ letterSpacing: '0.1em', fontWeight: 400 }}
+                  >
                     {item.label}
                     <ChevronDown size={12} className={`transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                   </button>
@@ -142,7 +145,8 @@ export default function Header() {
                         key={child.href}
                         to={child.href}
                         onClick={handleLinkClick}
-                        className="block px-5 py-3 text-[13px] text-gray-300 hover:text-white font-body tracking-[0.08em] transition-all duration-200 border-l-2 border-transparent hover:border-primary hover:bg-white/5"
+                        className="block px-5 py-3 text-[13px] text-gray-300 hover:text-white font-body transition-all duration-200 border-l-2 border-transparent hover:border-primary hover:bg-white/5"
+                        style={{ letterSpacing: '0.08em' }}
                       >
                         {child.label}
                       </Link>
@@ -158,7 +162,8 @@ export default function Header() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-primary text-primary px-5 py-2 rounded text-[13px] font-semibold tracking-[0.08em] hover:bg-primary hover:text-black transition-all duration-200"
+            className="border border-primary text-primary px-5 py-2 rounded text-[13px] font-semibold uppercase hover:bg-primary hover:text-black transition-all duration-200"
+            style={{ letterSpacing: '0.08em', borderWidth: '1.5px' }}
           >
             Consulta pelo WhatsApp
           </a>
@@ -180,7 +185,8 @@ export default function Header() {
               {item.type === "anchor" && (
                 <button
                   onClick={() => handleAnchorClick(item.href!)}
-                  className="block w-full text-left py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm tracking-[0.08em]"
+                  className="block w-full text-left py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm uppercase"
+                  style={{ letterSpacing: '0.1em' }}
                 >
                   {item.label}
                 </button>
@@ -189,7 +195,8 @@ export default function Header() {
                 <Link
                   to={item.href!}
                   onClick={handleLinkClick}
-                  className="block py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm tracking-[0.08em]"
+                  className="block py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm uppercase"
+                  style={{ letterSpacing: '0.1em' }}
                 >
                   {item.label}
                 </Link>
@@ -198,7 +205,8 @@ export default function Header() {
                 <>
                   <button
                     onClick={() => setMobileDropdown(mobileDropdown === item.label ? null : item.label)}
-                    className="flex items-center justify-between w-full py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm tracking-[0.08em]"
+                    className="flex items-center justify-between w-full py-3 text-gray-300 hover:text-primary transition-colors border-b border-white/5 font-body text-sm uppercase"
+                    style={{ letterSpacing: '0.1em' }}
                   >
                     {item.label}
                     <ChevronDown size={14} className={`transition-transform duration-200 ${mobileDropdown === item.label ? "rotate-180" : ""}`} />
@@ -210,7 +218,8 @@ export default function Header() {
                           key={child.href}
                           to={child.href}
                           onClick={handleLinkClick}
-                          className="block py-2.5 text-gray-400 hover:text-primary transition-colors font-body text-xs tracking-[0.08em]"
+                          className="block py-2.5 text-gray-400 hover:text-primary transition-colors font-body text-xs"
+                          style={{ letterSpacing: '0.08em' }}
                         >
                           {child.label}
                         </Link>
@@ -225,7 +234,8 @@ export default function Header() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-4 border border-primary text-primary text-center px-5 py-3 rounded font-semibold text-sm tracking-[0.08em] hover:bg-primary hover:text-black transition-all duration-200"
+            className="block mt-4 border border-primary text-primary text-center px-5 py-3 rounded font-semibold text-sm uppercase hover:bg-primary hover:text-black transition-all duration-200"
+            style={{ letterSpacing: '0.08em', borderWidth: '1.5px' }}
           >
             Consulta pelo WhatsApp
           </a>
