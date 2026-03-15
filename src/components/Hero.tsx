@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Bottom fade into next section */}
       <div className="absolute bottom-0 w-full h-[120px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0a0a0a)' }} />
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 py-32 md:py-40 text-left max-w-[42%]">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 py-32 md:py-40 text-left">
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6 animate-[fade-in_0.8s_ease-out]" style={{ fontWeight: 300, letterSpacing: '0.04em' }}>
           Seus Direitos Trabalhistas,
           <br />
