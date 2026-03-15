@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const lawyers = [
   {
     name: "Dr. Laefo Duarte",
-    role: "Sócio Fundador · Direito do Trabalho",
+    role: "Direito do Trabalho",
     initials: "LD",
     bio: "Advogado especialista em Direito do Trabalho. Sócio fundador com mais de 25 anos de atuação em defesa de trabalhadores e empresas. Atendimento estratégico e humanizado.",
     href: "/advogados/dr-laefo-duarte",
