@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollReveal(threshold = 0.15) {
+export function useScrollReveal(_threshold = 0) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -14,11 +14,11 @@ export function useScrollReveal(threshold = 0.15) {
           observer.unobserve(el);
         }
       },
-      { threshold }
+      { threshold: 0, rootMargin: '0px 0px -40px 0px' }
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, []);
 
   return { ref, isVisible };
 }

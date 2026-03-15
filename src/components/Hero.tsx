@@ -1,24 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Shield, MapPin, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const WHATSAPP = "https://wa.me/5511992930589";
 
 export default function Hero() {
-  const [offsetY, setOffsetY] = useState(0);
+  const heroBgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setOffsetY(window.scrollY * 0.3);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    let rafId: number | null = null;
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      lastScrollY = window.scrollY;
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        const offset = lastScrollY * 0.4;
+        if (heroBgRef.current) {
+          heroBgRef.current.style.transform = `translateY(${offset}px) translateZ(0)`;
+        }
+        rafId = null;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Parallax BG */}
       <div
+        ref={heroBgRef}
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: `translateY(${offsetY}px)` }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
       />
       {/* Directional asymmetric overlay */}
       <div

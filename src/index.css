@@ -125,3 +125,10 @@
   scrollbar-width: thin;
   scrollbar-color: #C5983C #0a0a0a;
 }
+
+/* GPU-accelerate elements waiting for scroll reveal */
+[class*="opacity-0"],
+[class*="translate-y"] {
+  will-change: opacity, transform;
+}
+
