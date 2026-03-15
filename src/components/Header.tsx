@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 const WHATSAPP = "https://wa.me/5511992930589";
 
 const NAV_ITEMS = [
-  { label: "Início", href: "/#inicio", type: "anchor" },
+  { label: "Home", href: "/#inicio", type: "anchor" },
   { label: "Sobre", href: "/#sobre", type: "anchor" },
   {
     label: "Advogados",
