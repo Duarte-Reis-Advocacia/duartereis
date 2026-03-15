@@ -43,7 +43,7 @@ export default function Hero() {
           Desde 1999, o escritório Duarte Reis representa trabalhadores em São Paulo com ética, estratégia e resultados comprovados.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-[fade-in_1.2s_ease-out]">
+        <div className="flex flex-col sm:flex-row gap-4 justify-start mb-12 animate-[fade-in_1.2s_ease-out]">
           <a
             href={WHATSAPP}
             target="_blank"
