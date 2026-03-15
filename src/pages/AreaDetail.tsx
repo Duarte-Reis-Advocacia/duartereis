@@ -113,8 +113,8 @@ export default function AreaDetail() {
       <main>
         {/* Hero */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/areas-bg.jpg')" }} />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%)' }} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${areaBgImages[slug!] || "/areas-bg.jpg"}')` }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%)' }} />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="font-heading text-3xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{area.title}</h1>
             <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{area.subtitle}</p>
