@@ -8,7 +8,7 @@ import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { articles } from "./Artigos";
 
-const WA_LINK = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function ArtigoDetail() {
   const { slug } = useParams<{ slug: string }>();

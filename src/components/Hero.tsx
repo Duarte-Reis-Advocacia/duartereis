@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Shield, MapPin, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   const heroBgRef = useRef<HTMLDivElement>(null);

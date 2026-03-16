@@ -3,7 +3,7 @@ import { ShieldCheck, Clock, Heart, ChevronDown } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const cards = [
   {
