@@ -160,7 +160,7 @@ export default function Header() {
           
           <span className="text-[#333] mx-3 select-none">|</span>
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="border border-primary text-primary px-5 py-2 rounded text-[13px] font-semibold uppercase hover:bg-primary hover:text-black transition-all duration-200"
