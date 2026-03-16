@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/#inicio", type: "anchor" },
@@ -160,7 +160,7 @@ export default function Header() {
           
           <span className="text-[#333] mx-3 select-none">|</span>
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="border border-primary text-primary px-5 py-2 rounded text-[13px] font-semibold uppercase hover:bg-primary hover:text-black transition-all duration-200"
@@ -232,7 +232,7 @@ export default function Header() {
             </div>
           ))}
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="block mt-4 border border-primary text-primary text-center px-5 py-3 rounded font-semibold text-sm uppercase hover:bg-primary hover:text-black transition-all duration-200"

@@ -3,7 +3,7 @@ import { ShieldCheck, Clock, Heart, ChevronDown } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const cards = [
   {
@@ -57,7 +57,7 @@ function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
       >
         <p className="text-gray-300 font-body text-sm leading-relaxed mt-6 mb-6" style={{ fontWeight: 300 }}>{text}</p>
         <a
-          href={WHATSAPP}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"

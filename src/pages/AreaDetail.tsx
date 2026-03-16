@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const areaBgImages: Record<string, string> = {
   "direito-trabalhista": "/area-trabalhista.jpg",
@@ -157,7 +157,7 @@ export default function AreaDetail() {
               <span className="block h-0.5 w-16 bg-primary" />
             </div>
             <a
-              href={WHATSAPP}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded text-lg font-bold hover:bg-gold-dark transition-colors duration-200"

@@ -8,7 +8,7 @@ import GradientDivider from "@/components/GradientDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { articles } from "./Artigos";
 
-const WA_LINK = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function ArtigoDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -81,7 +81,7 @@ function Sidebar({ otherArticles }: { otherArticles: typeof articles }) {
         <h3 className="font-heading text-lg text-white mb-3">Precisa de Orientação?</h3>
         <p className="text-gray-400 text-sm font-body mb-4">Fale com um advogado especialista.</p>
         <a
-          href={WA_LINK}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-semibold text-sm hover:bg-gold-dark transition-colors duration-200"

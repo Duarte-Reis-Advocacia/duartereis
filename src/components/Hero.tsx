@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Shield, MapPin, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   const heroBgRef = useRef<HTMLDivElement>(null);
@@ -61,7 +61,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-start mb-12 animate-[fade-in_1.2s_ease-out]">
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-8 py-4 rounded font-semibold text-lg hover:bg-gold-light transition-colors duration-200"

@@ -1,17 +1,44 @@
 import { Facebook, Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const NAV = [
   { label: "Início", href: "/#inicio" },
   { label: "Sobre", href: "/#sobre" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Contato", href: "/#contato" },
 ];
 
 const LEGAL = [
   { label: "Termos de Uso", href: "/termos-de-uso" },
   { label: "Política de Privacidade", href: "/politica-de-privacidade" },
 ];
+
+function FooterContatoLink() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/#contato');
+      setTimeout(() => {
+        document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  };
+
+  return (
+    <a
+      href="/#contato"
+      onClick={handleClick}
+      className="text-gray-400 text-sm font-body hover:text-primary transition-colors duration-200"
+      style={{ fontWeight: 300 }}
+    >
+      Contato
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -31,6 +58,9 @@ export default function Footer() {
                   <a href={n.href} className="text-gray-400 text-sm font-body hover:text-primary transition-colors duration-200" style={{ fontWeight: 300 }}>{n.label}</a>
                 </li>
               ))}
+              <li>
+                <FooterContatoLink />
+              </li>
             </ul>
             <ul className="space-y-2 mt-4 pt-4 border-t border-white/5">
               {LEGAL.map((n) => (

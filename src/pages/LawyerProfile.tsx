@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const WHATSAPP = "https://wa.me/5511992930589";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const lawyers: Record<string, {
   name: string;
@@ -93,7 +93,7 @@ export default function LawyerProfile() {
               <span className="block h-0.5 w-20 bg-primary" />
             </div>
             <a
-              href={WHATSAPP}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded font-semibold hover:bg-primary hover:text-black transition-all duration-200"
@@ -139,7 +139,7 @@ export default function LawyerProfile() {
               <span className="flex items-center gap-2"><Mail size={16} className="text-primary" /> contato@duartereisadvogados.com.br</span>
             </div>
             <a
-              href={WHATSAPP}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded text-lg font-bold hover:bg-gold-dark transition-colors duration-200"
