@@ -1,11 +1,12 @@
 import { Scale, Users, AlertCircle, FileText } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Link } from "react-router-dom";
 
 const services = [
-  { icon: Scale, label: "Direito do Consumidor" },
-  { icon: Users, label: "Direito de Família" },
-  { icon: AlertCircle, label: "Reparação de Danos Materiais e Morais" },
-  { icon: FileText, label: "Rescisão Indireta e Verbas Rescisórias" },
+  { icon: Scale, label: "Direito do Consumidor", href: "/areas-de-atuacao/direito-do-consumidor" },
+  { icon: Users, label: "Direito de Família", href: "/areas-de-atuacao/direito-de-familia" },
+  { icon: AlertCircle, label: "Reparação de Danos Materiais e Morais", href: "/areas-de-atuacao/reparacao-de-danos" },
+  { icon: FileText, label: "Contratos Empresariais", href: "/areas-de-atuacao/contratos-empresariais" },
 ];
 
 export default function OtherServices() {
@@ -25,14 +26,15 @@ export default function OtherServices() {
         <h2 className="font-heading text-2xl md:text-3xl text-white mb-8" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Atuamos Também em</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {services.map((s, i) => (
-            <div
+            <Link
               key={s.label}
-              className={`card-dark-glass flex items-center gap-2 rounded-full px-5 py-2.5 text-gray-300 text-sm font-body transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              to={s.href}
+              className={`card-dark-glass flex items-center gap-2 rounded-full px-5 py-2.5 text-gray-300 text-sm font-body transition-all duration-500 hover:text-primary ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: `${i * 70}ms`, fontWeight: 300 }}
             >
               <s.icon size={14} className="text-primary" />
               {s.label}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

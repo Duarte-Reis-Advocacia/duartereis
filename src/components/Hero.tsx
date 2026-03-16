@@ -52,8 +52,11 @@ export default function Hero() {
           <br />
           <span className="text-primary">Defendidos com Firmeza</span>
         </h1>
+        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-4 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300 }}>
+          Experiência jurídica e atuação estratégica há 27 anos.
+        </p>
         <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300 }}>
-          Desde 1999, o escritório Duarte Reis representa trabalhadores em São Paulo com ética, estratégia e resultados comprovados.
+          Soluções seguras para empresas e trabalhadores em Direito do Trabalho, contratos empresariais, consumidor e família.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-start mb-12 animate-[fade-in_1.2s_ease-out]">

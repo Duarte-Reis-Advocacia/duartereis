@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, Check } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,30 +15,44 @@ const lawyers: Record<string, {
   bio: string[];
   formation: string[];
   badges: string[];
+  highlights?: string[];
 }> = {
   "dr-laefo-duarte": {
-    name: "Dr. Laefo Duarte",
-    subtitle: "Advogado Sócio Fundador",
+    name: "Dr. Laefo Duarte Neto",
+    subtitle: "Advogado | Sócio Fundador",
     initials: "LD",
     bio: [
-      "Por mais de vinte e cinco anos, o Dr. Laefo Duarte, sócio fundador da Duarte Reis Sociedade de Advogados, tem se dedicado à representação de clientes em disputas trabalhistas de alto risco e litígios complexos. Seu portfólio de clientes inclui profissionais seniores de serviços financeiros, executivos de empresas públicas e privadas, bem como advogados, médicos, contadores e acadêmicos de renomadas instituições globais.",
-      "Com expertise em estratégias jurídicas inovadoras, o Dr. Laefo atua na defesa de disputas trabalhistas diversas, destacando-se no setor financeiro. Além disso, presta assessoria em litígios comerciais, questões salariais, formação de empresas, reestruturação patrimonial, planejamento sucessório, fusões e aquisições.",
-      "Sua atuação resultou em acordos monetários relevantes e em decisões judiciais pioneiras que ampliaram as proteções trabalhistas em diversas áreas do direito. O Dr. Laefo é reconhecido por sua atuação perante tribunais e painéis de arbitragem em casos envolvendo discriminação no emprego, assédio, quebra de contrato e violações de cláusulas de não concorrência.",
+      "Há mais de vinte e cinco anos, o Dr. Laefo Duarte, sócio fundador da Duarte Reis Sociedade de Advogados, atua na condução de ações trabalhistas. Ao longo de sua trajetória, tem representado clientes em questões envolvendo relações de trabalho, conflitos contratuais e ações empresariais, além de demandas de consumo, inclusive contra instituições financeiras e plataformas digitais.",
+      "Também presta assessoria jurídica a empresas de diferentes segmentos, especialmente do comércio varejista de calçados e móveis, além da indústria gráfica. Sua atuação em ações trabalhistas envolve questões frequentes como horas extras, pagamentos \"por fora\", acidentes de trabalho, adicionais de periculosidade e insalubridade, além de pedidos de indenização por danos morais.",
+      "Com abordagem técnica e estratégica, o Dr. Laefo possui experiência na condução de negociações e na atuação perante tribunais, atuando em casos relacionados a relações de trabalho, contratos e direitos do consumidor.",
     ],
-    formation: ["Graduado em Direito", "Pós-Graduado em Direito Trabalhista"],
-    badges: ["Direito do Trabalho", "Litígios Complexos", "Setor Financeiro", "Arbitragem", "Planejamento Sucessório", "Fusões e Aquisições"],
+    formation: [
+      "Graduado em Direito",
+      "Pós-graduação em Direito do Consumidor",
+      "Especialista em Direito e Processo do Trabalho",
+    ],
+    badges: ["Direito do Trabalho", "Contratos Empresariais", "Direito do Consumidor", "Assessoria Jurídica Empresarial"],
   },
   "dra-cristiane-reis": {
     name: "Dra. Cristiane Reis",
-    subtitle: "Advogada Sócia Fundadora",
+    subtitle: "Advogada | Sócia Fundadora | 27 anos de experiência",
     initials: "CR",
     bio: [
-      "Dra. Cristiane, sócia fundadora da Duarte Reis Sociedade de Advogados, possui vasta experiência de 25 anos atuando em casos complexos de múltiplas áreas do direito. Durante sua trajetória, representou funcionários e executivos em disputas trabalhistas contra algumas das maiores corporações do mundo.",
-      "Com atuação constante em tribunais estaduais e federais, além de perante painéis de arbitragem, Dra. Cristiane tem lidado com questões como quebra de contrato, não pagamento de salários, compensação de bônus, discriminação no emprego, retaliação ilegal e denúncia de irregularidades.",
-      "Seus clientes incluem executivos seniores, profissionais financeiros, de vendas, advogados, médicos e profissionais de organizações governamentais de destaque. Sua dedicação e expertise refletem-se na capacidade de defender os interesses de seus clientes de forma eficaz e estratégica, garantindo resultados positivos em casos complexos e desafiadores.",
+      "A Dra. Cristiane Reis é advogada há 27 anos e sócia fundadora da Duarte Reis Sociedade de Advogados, com atuação consolidada no Direito Empresarial e no Direito do Trabalho.",
+      "Reconhecida por sua atuação no comércio varejista de calçados, construiu sólida reputação ao longo de sua trajetória prestando assessoria jurídica para mais de 200 empresas na capital e no interior de São Paulo, além de representar empresas do setor em negociações sindicais na cidade de São Paulo.",
+      "Seu trabalho é marcado pela prevenção de riscos trabalhistas, condução estratégica de negociações e defesa jurídica de empresas, sempre com foco na proteção do negócio e na segurança jurídica das atividades empresariais.",
+      "Além do setor calçadista, também presta assessoria jurídica para empresas de diversos segmentos, incluindo redes de móveis planejados, gráficas e editoras, empresas de assistência técnica em telefonia, clínicas médicas e escritórios de contabilidade.",
+      "Possui ampla experiência na análise e elaboração de contratos empresariais, incluindo compra e venda de fundo de comércio, contratos comerciais, locações comerciais e contratos digitais envolvendo uso de imagem e influenciadores.",
+      "Seu escritório está localizado na Mooca, em São Paulo, atendendo empresas que buscam orientação jurídica preventiva, segurança jurídica e soluções eficientes para questões trabalhistas e empresariais.",
     ],
     formation: ["Graduada em Direito", "Pós-Graduada em Direito Trabalhista"],
-    badges: ["Direito do Trabalho", "Direito de Família", "Direito do Consumidor", "Arbitragem", "Discriminação no Emprego", "Litígios Corporativos"],
+    badges: ["Direito do Trabalho", "Direito Empresarial", "Contratos Empresariais", "Assessoria Jurídica Preventiva"],
+    highlights: [
+      "27 anos de advocacia",
+      "Mais de 200 empresas atendidas",
+      "Representação no setor calçadista em negociações sindicais",
+      "Atuação consolidada no comércio varejista de SP e interior",
+    ],
   },
 };
 
@@ -97,6 +111,15 @@ export default function LawyerProfile() {
           </div>
         </section>
 
+        {/* Highlights (Cristiane only) */}
+        {lawyer.highlights && (
+          <section className="py-16 bg-[#0a0a0a]" style={{ borderTop: "1px solid rgba(197, 152, 60, 0.15)" }}>
+            <div className="container mx-auto px-4 max-w-3xl">
+              <HighlightsSection highlights={lawyer.highlights} />
+            </div>
+          </section>
+        )}
+
         {/* Badges */}
         <section className="py-20 bg-[#111111]">
           <div className="container mx-auto px-4 max-w-3xl">
@@ -151,6 +174,23 @@ function BiographySection({ lawyer }: { lawyer: typeof lawyers[string] }) {
             </li>
           ))}
         </ul>
+      </div>
+    </div>
+  );
+}
+
+function HighlightsSection({ highlights }: { highlights: string[] }) {
+  const { ref, isVisible } = useScrollReveal();
+  return (
+    <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+      <h3 className="font-heading text-xl mb-6 text-white text-center" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Destaques</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {highlights.map((h, i) => (
+          <div key={i} className="card-dark-glass flex items-center gap-3 px-5 py-4 rounded">
+            <Check size={18} className="text-primary shrink-0" />
+            <span className="text-gray-300 font-body text-sm" style={{ fontWeight: 300 }}>{h}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
