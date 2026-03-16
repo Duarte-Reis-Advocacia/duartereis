@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import type { LucideIcon } from "lucide-react";
 
 const benefits = [
-  { icon: UserCheck, title: "Atendimento Direto com os Sócios", text: "Você sempre falará diretamente com Dr. Laefo ou Dra. Cristiane, sem intermediários." },
+  { icon: UserCheck, title: "Atendimento direto com os Proprietários", text: "Você sempre falará diretamente com Dr. Laefo ou Dra. Cristiane, sem intermediários." },
   { icon: Monitor, title: "Online ou Presencial", text: "Consultas por videoconferência ou em nosso escritório na Mooca com estacionamento no local." },
   { icon: Search, title: "Estratégia Individualizada", text: "Cada caso é analisado em profundidade antes de qualquer ação." },
   { icon: Trophy, title: "+25 Anos de Resultados", text: "Histórico sólido de êxito em processos trabalhistas em São Paulo." },
