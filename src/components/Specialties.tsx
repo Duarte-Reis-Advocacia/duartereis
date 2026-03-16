@@ -1,4 +1,5 @@
-import { ShieldCheck, Clock, Heart } from "lucide-react";
+import { useState } from "react";
+import { ShieldCheck, Clock, Heart, ChevronDown } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 
@@ -22,7 +23,14 @@ const cards = [
   },
 ];
 
-function Card({ icon: Icon, title, text, delay }: { icon: typeof ShieldCheck; title: string; text: string; delay: number }) {
+function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
+  icon: typeof ShieldCheck;
+  title: string;
+  text: string;
+  delay: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <div
@@ -30,24 +38,44 @@ function Card({ icon: Icon, title, text, delay }: { icon: typeof ShieldCheck; ti
       className={`card-dark-glass p-8 flex flex-col transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: `${delay + 50}ms` }}>
-        <Icon size={22} className="text-primary" />
-      </div>
-      <h3 className="font-heading text-xl text-primary mb-4" style={{ fontWeight: 500 }}>{title}</h3>
-      <p className="text-gray-300 font-body text-sm leading-relaxed flex-1 mb-6" style={{ fontWeight: 300 }}>{text}</p>
-      <a
-        href={WHATSAPP}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
+      <button
+        onClick={onToggle}
+        className="flex items-center gap-4 w-full text-left cursor-pointer"
       >
-        Quero Ser Avaliado
-      </a>
+        <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: `${delay + 50}ms` }}>
+          <Icon size={22} className="text-primary" />
+        </div>
+        <h3 className="font-heading text-xl text-primary flex-1" style={{ fontWeight: 500 }}>{title}</h3>
+        <ChevronDown
+          size={20}
+          className={`text-primary shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      <div
+        className="overflow-hidden transition-all duration-300 ease-in-out"
+        style={{ maxHeight: isOpen ? "400px" : "0px" }}
+      >
+        <p className="text-gray-300 font-body text-sm leading-relaxed mt-6 mb-6" style={{ fontWeight: 300 }}>{text}</p>
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
+        >
+          Agende uma Consulta
+        </a>
+      </div>
     </div>
   );
 }
 
 export default function Specialties() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(prev => prev === index ? null : index);
+  };
+
   return (
     <section
       id="especialidades"
@@ -58,10 +86,16 @@ export default function Specialties() {
       }}
     >
       <div className="container mx-auto px-4 relative z-10">
-        <SectionHeading title="Defendemos Quem Mais Precisa" subtitle="Atuamos com foco em três frentes do Direito Trabalhista que mais impactam a vida dos trabalhadores." light />
+        <SectionHeading title="Experiência na solução de conflitos trabalhistas" subtitle="Nossa atuação abrange as principais demandas do Direito do Trabalho, orientando e defendendo empresas e trabalhadores com estratégia e segurança jurídica." light />
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((c, i) => (
-            <Card key={c.title} {...c} delay={i * 120} />
+            <AccordionCard
+              key={c.title}
+              {...c}
+              delay={i * 120}
+              isOpen={openIndex === i}
+              onToggle={() => handleToggle(i)}
+            />
           ))}
         </div>
       </div>

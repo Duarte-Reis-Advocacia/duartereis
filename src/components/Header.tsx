@@ -22,9 +22,10 @@ const NAV_ITEMS = [
       { label: "Direito Trabalhista", href: "/areas-de-atuacao/direito-trabalhista" },
       { label: "Direito do Consumidor", href: "/areas-de-atuacao/direito-do-consumidor" },
       { label: "Direito de Família", href: "/areas-de-atuacao/direito-de-familia" },
-      { label: "Reparação de Danos", href: "/areas-de-atuacao/reparacao-de-danos" },
+      { label: "Contratos Empresariais", href: "/areas-de-atuacao/contratos-empresariais" },
     ],
   },
+  { label: "Artigos", href: "/artigos", type: "link" },
   { label: "Contato", href: "/#contato", type: "anchor" },
 ];
 
