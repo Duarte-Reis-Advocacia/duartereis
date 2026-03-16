@@ -42,7 +42,7 @@ const areas: Record<string, AreaData> = {
       { title: "Desvio e Acúmulo de Função", text: "Cobrança de diferenças salariais quando o trabalhador exerce funções além das contratadas." },
       { title: "Insalubridade e Periculosidade", text: "Garantia do pagamento de adicionais para trabalho em condições insalubres ou perigosas." },
     ],
-    cta: "Você tem direitos trabalhistas a reivindicar? Nossa equipe está pronta para avaliar seu caso gratuitamente.",
+    cta: "Você tem direitos trabalhistas a reivindicar? Estamos prontos para avaliar seu caso.",
   },
   "direito-do-consumidor": {
     title: "Direito do Consumidor",
