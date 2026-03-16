@@ -14,7 +14,7 @@ const lawyers = [
     name: "Dra. Cristiane Reis",
     role: "Trabalho, Família e Consumidor",
     initials: "CR",
-    bio: "Advogada com vasta experiência em Direito do Trabalho, Família e Consumidor. Parceira de carreira e irmã, representa o compromisso familiar e ético que guia o escritório desde o início.",
+    bio: "Advogada com vasta experiência em Direito do Trabalho, Família e Consumidor. Representa o compromisso familiar e ético que guia o escritório desde o início.",
     href: "/advogados/dra-cristiane-reis",
   },
 ];
