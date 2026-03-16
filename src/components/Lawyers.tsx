@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const lawyers = [
   {
-    name: "Dr. Laefo Duarte",
-    role: "Direito do Trabalho",
-    initials: "LD",
-    bio: "Advogado especialista em Direito do Trabalho com mais de 25 anos de atuação em defesa de trabalhadores e empresas. Atendimento estratégico e humanizado.",
-    href: "/advogados/dr-laefo-duarte",
-  },
-  {
     name: "Dra. Cristiane Reis",
     role: "Trabalho, Família e Consumidor",
     initials: "CR",
     bio: "Advogada com vasta experiência em Direito do Trabalho, Família e Consumidor. Representa o compromisso familiar e ético que guia o escritório desde o início.",
     href: "/advogados/dra-cristiane-reis",
+  },
+  {
+    name: "Dr. Laefo Duarte",
+    role: "Direito do Trabalho",
+    initials: "LD",
+    bio: "Advogado especialista em Direito do Trabalho com mais de 25 anos de atuação em defesa de trabalhadores e empresas. Atendimento estratégico e humanizado.",
+    href: "/advogados/dr-laefo-duarte",
   },
 ];
 
