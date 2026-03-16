@@ -30,7 +30,7 @@ export default function About() {
           <p>A Dra. Cristiane Reis consolidou atuação de destaque no comércio varejista de São Paulo e interior, prestando assessoria jurídica para mais de 200 empresas, especialmente no setor de calçados, além de representar empresas em negociações sindicais na capital paulista.</p>
         </div>
         <a
-          href={WHATSAPP}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-block mt-8 bg-primary text-primary-foreground px-8 py-3.5 rounded font-semibold hover:bg-gold-dark transition-all duration-500 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}

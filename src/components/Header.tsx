@@ -232,7 +232,7 @@ export default function Header() {
             </div>
           ))}
           <a
-            href={WHATSAPP}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="block mt-4 border border-primary text-primary text-center px-5 py-3 rounded font-semibold text-sm uppercase hover:bg-primary hover:text-black transition-all duration-200"

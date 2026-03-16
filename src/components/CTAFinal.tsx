@@ -26,7 +26,7 @@ export default function CTAFinal() {
           Entre em contato agora e receba uma avaliação do seu caso.
         </p>
         <a
-          href={WHATSAPP}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded text-lg font-bold hover:bg-gold-dark transition-all duration-500 delay-200 shadow-lg shadow-primary/20 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
