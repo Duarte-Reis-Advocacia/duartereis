@@ -93,7 +93,7 @@ export default function LawyerProfile() {
               <span className="block h-0.5 w-20 bg-primary" />
             </div>
             <a
-              href={WHATSAPP}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-3 rounded font-semibold hover:bg-primary hover:text-black transition-all duration-200"
