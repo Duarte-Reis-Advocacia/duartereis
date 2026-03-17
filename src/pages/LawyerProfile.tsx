@@ -11,7 +11,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 const lawyers: Record<string, {
   name: string;
   subtitle: string;
-  initials: string;
+  photo: string;
   bio: string[];
   formation: string[];
   badges: string[];
