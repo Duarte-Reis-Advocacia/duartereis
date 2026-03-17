@@ -51,8 +51,8 @@ export default function Hero() {
           className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 animate-[fade-in_0.8s_ease-out] max-w-xl"
           style={{ fontWeight: 300, letterSpacing: '0.04em' }}
         >
-          <span className="text-white">Experiência jurídica e atuação estratégica </span>
-          <span style={{ color: '#C5983C' }}>há 27 anos.</span>
+          <span className="text-white">Experiência jurídica e atuação </span>
+          <span style={{ color: '#C5983C' }}>estratégica há 27 anos</span>
         </h1>
         <p className="text-gray-300 text-lg md:text-xl max-w-lg mb-10 font-body animate-[fade-in_1s_ease-out]" style={{ fontWeight: 300 }}>
           Soluções seguras para empresas e trabalhadores em Direito do Trabalho, contratos empresariais, consumidor e família.
