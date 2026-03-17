@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ShieldCheck, Clock, Heart, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 
@@ -10,23 +11,27 @@ const cards = [
     icon: ShieldCheck,
     title: "Acidente do Trabalho e Doença Ocupacional",
     text: "Se você sofreu um acidente no trabalho ou desenvolveu uma doença em razão das suas atividades profissionais, você tem direito à indenização, estabilidade e benefícios. A Duarte Reis atua para garantir que seus direitos sejam respeitados integralmente, incluindo danos materiais, morais e pensão vitalícia quando aplicável.",
+    articleSlug: "/artigos/acidente-de-trabalho-entenda-seus-direitos",
   },
   {
     icon: Clock,
     title: "Horas Extras Não Pagas",
     text: "Seu empregador está deixando de pagar horas extras, adicional noturno, banco de horas manipulado ou intervalo suprimido? Você pode estar perdendo valores significativos. Nossa equipe calcula o que você tem a receber e atua judicialmente para resgatar esses direitos com juros e correção.",
+    articleSlug: "/artigos/horas-extras-nao-pagas-como-calcular",
   },
   {
     icon: Heart,
     title: "Estabilidade da Gestante",
     text: "A lei garante que nenhuma gestante pode ser demitida sem justa causa desde a confirmação da gravidez até 5 meses após o parto. Se você foi dispensada nesse período, tem direito à reintegração ao emprego ou indenização completa. Não deixe esse direito passar.",
+    articleSlug: "/artigos/estabilidade-da-gestante-o-que-a-lei-garante",
   },
 ];
 
-function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
+function AccordionCard({ icon: Icon, title, text, articleSlug, delay, isOpen, onToggle }: {
   icon: typeof ShieldCheck;
   title: string;
   text: string;
+  articleSlug: string;
   delay: number;
   isOpen: boolean;
   onToggle: () => void;
@@ -56,14 +61,22 @@ function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
         style={{ maxHeight: isOpen ? "400px" : "0px" }}
       >
         <p className="text-gray-300 font-body text-sm leading-relaxed mt-6 mb-6" style={{ fontWeight: 300 }}>{text}</p>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
-        >
-          Agende uma Consulta
-        </a>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
+          >
+            Agende uma Consulta
+          </a>
+          <Link
+            to={articleSlug}
+            className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded text-sm font-semibold hover:bg-primary hover:text-black transition-all duration-200"
+          >
+            Leia o artigo →
+          </Link>
+        </div>
       </div>
     </div>
   );
