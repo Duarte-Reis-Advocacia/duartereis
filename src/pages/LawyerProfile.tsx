@@ -81,11 +81,11 @@ export default function LawyerProfile() {
       <main>
         {/* Hero */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lawyer-bg.jpg')" }} />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%)' }} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1568992688065-536aad8a12f6?auto=format&fit=crop&w=1920&q=80")' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.75) 100%)' }} />
           <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/40">
-              <img src={lawyer.photo} alt={lawyer.name} className="w-full h-full object-cover object-top" />
+            <div className="w-40 h-40 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/40">
+              <img src={lawyer.photo} alt={lawyer.name} className="w-full h-full object-cover" style={{ objectPosition: slug === 'dr-laefo-duarte' ? 'center 15%' : 'center top' }} />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{lawyer.name}</h1>
             <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{lawyer.subtitle}</p>
