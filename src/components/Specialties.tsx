@@ -100,7 +100,7 @@ export default function Specialties() {
     >
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Experiência na solução de conflitos trabalhistas" subtitle="Nossa atuação abrange as principais demandas do Direito do Trabalho, orientando e defendendo empresas e trabalhadores com estratégia e segurança jurídica." light />
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
           {cards.map((c, i) => (
             <AccordionCard
               key={c.title}
