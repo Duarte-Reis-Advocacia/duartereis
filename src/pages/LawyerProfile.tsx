@@ -20,7 +20,7 @@ const lawyers: Record<string, {
   "dr-laefo-duarte": {
     name: "Dr. Laefo Duarte Neto",
     subtitle: "Advogado | Sócio Fundador",
-    initials: "LD",
+    photo: "/laefo.jpg",
     bio: [
       "Há mais de vinte e cinco anos, o Dr. Laefo Duarte, sócio fundador da Duarte Reis Sociedade de Advogados, atua na condução de ações trabalhistas. Ao longo de sua trajetória, tem representado clientes em questões envolvendo relações de trabalho, conflitos contratuais e ações empresariais, além de demandas de consumo, inclusive contra instituições financeiras e plataformas digitais.",
       "Também presta assessoria jurídica a empresas de diferentes segmentos, especialmente do comércio varejista de calçados e móveis, além da indústria gráfica. Sua atuação em ações trabalhistas envolve questões frequentes como horas extras, pagamentos \"por fora\", acidentes de trabalho, adicionais de periculosidade e insalubridade, além de pedidos de indenização por danos morais.",
