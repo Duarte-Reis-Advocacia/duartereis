@@ -27,7 +27,7 @@ export default function About() {
           <p>Localizada na Mooca, em São Paulo, a Duarte Reis Sociedade de Advogados atua há mais de duas décadas oferecendo assessoria jurídica segura e soluções eficientes para empresas e particulares.</p>
           <p>O escritório é conduzido pelos sócios Dra. Cristiane Reis, advogada com 27 anos de experiência, e Dr. Laefo Duarte Neto, com atuação baseada em seriedade, transparência e atendimento personalizado.</p>
           <p>Com forte atuação em Direito do Trabalho, o escritório também presta assessoria em contratos empresariais, Direito do Consumidor, Direito de Família e Direito Civil.</p>
-          <p>A Dra. Cristiane Reis consolidou atuação de destaque no comércio varejista de São Paulo e interior, prestando assessoria jurídica para mais de 200 empresas, especialmente no setor de calçados, além de representar empresas em negociações sindicais na capital paulista.</p>
+          <p>A Dra. Cristiane Reis consolidou atuação de destaque no comércio varejista de São Paulo e interior, prestando assessoria jurídica para mais de 200 lojas, especialmente no setor de calçados, além de representar empresas em negociações sindicais na capital paulista.</p>
         </div>
         <a
           href={WHATSAPP_URL}
