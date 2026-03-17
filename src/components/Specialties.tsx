@@ -27,10 +27,11 @@ const cards = [
   },
 ];
 
-function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
+function AccordionCard({ icon: Icon, title, text, articleSlug, delay, isOpen, onToggle }: {
   icon: typeof ShieldCheck;
   title: string;
   text: string;
+  articleSlug: string;
   delay: number;
   isOpen: boolean;
   onToggle: () => void;
@@ -60,14 +61,22 @@ function AccordionCard({ icon: Icon, title, text, delay, isOpen, onToggle }: {
         style={{ maxHeight: isOpen ? "400px" : "0px" }}
       >
         <p className="text-gray-300 font-body text-sm leading-relaxed mt-6 mb-6" style={{ fontWeight: 300 }}>{text}</p>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
-        >
-          Agende uma Consulta
-        </a>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded text-sm font-semibold hover:bg-gold-dark transition-colors duration-200"
+          >
+            Agende uma Consulta
+          </a>
+          <Link
+            to={articleSlug}
+            className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded text-sm font-semibold hover:bg-primary hover:text-black transition-all duration-200"
+          >
+            Leia o artigo →
+          </Link>
+        </div>
       </div>
     </div>
   );
