@@ -6,20 +6,20 @@ const lawyers = [
   {
     name: "Dra. Cristiane Reis",
     role: "Trabalho, Família e Consumidor",
-    initials: "CR",
+    photo: "/cristiane.jpg",
     bio: "Advogada com vasta experiência em Direito do Trabalho, Família e Consumidor. Representa o compromisso familiar e ético que guia o escritório desde o início.",
     href: "/advogados/dra-cristiane-reis",
   },
   {
     name: "Dr. Laefo Duarte",
     role: "Direito do Trabalho",
-    initials: "LD",
+    photo: "/laefo.jpg",
     bio: "Advogado especialista em Direito do Trabalho com mais de 25 anos de atuação em defesa de trabalhadores e empresas. Atendimento estratégico e humanizado.",
     href: "/advogados/dr-laefo-duarte",
   },
 ];
 
-function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0] & { delay: number }) {
+function LawyerCard({ name, role, photo, bio, href, delay }: typeof lawyers[0] & { delay: number }) {
   const { ref, isVisible } = useScrollReveal();
   return (
     <Link
@@ -28,8 +28,8 @@ function LawyerCard({ name, role, initials, bio, href, delay }: typeof lawyers[0
       className={`block card-dark-glass p-8 md:p-10 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
-        <span className="font-heading text-2xl text-primary">{initials}</span>
+      <div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/30">
+        <img src={photo} alt={name} className="w-full h-full object-cover object-top" />
       </div>
       <h3 className="font-heading text-xl text-white mb-1" style={{ fontWeight: 500 }}>{name}</h3>
       <p className="text-primary text-sm font-body mb-4">{role}</p>

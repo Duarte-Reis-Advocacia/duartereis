@@ -11,7 +11,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 const lawyers: Record<string, {
   name: string;
   subtitle: string;
-  initials: string;
+  photo: string;
   bio: string[];
   formation: string[];
   badges: string[];
@@ -20,7 +20,7 @@ const lawyers: Record<string, {
   "dr-laefo-duarte": {
     name: "Dr. Laefo Duarte Neto",
     subtitle: "Advogado | Sócio Fundador",
-    initials: "LD",
+    photo: "/laefo.jpg",
     bio: [
       "Há mais de vinte e cinco anos, o Dr. Laefo Duarte, sócio fundador da Duarte Reis Sociedade de Advogados, atua na condução de ações trabalhistas. Ao longo de sua trajetória, tem representado clientes em questões envolvendo relações de trabalho, conflitos contratuais e ações empresariais, além de demandas de consumo, inclusive contra instituições financeiras e plataformas digitais.",
       "Também presta assessoria jurídica a empresas de diferentes segmentos, especialmente do comércio varejista de calçados e móveis, além da indústria gráfica. Sua atuação em ações trabalhistas envolve questões frequentes como horas extras, pagamentos \"por fora\", acidentes de trabalho, adicionais de periculosidade e insalubridade, além de pedidos de indenização por danos morais.",
@@ -36,7 +36,7 @@ const lawyers: Record<string, {
   "dra-cristiane-reis": {
     name: "Dra. Cristiane Reis",
     subtitle: "Advogada | Sócia Fundadora | 27 anos de experiência",
-    initials: "CR",
+    photo: "/cristiane.jpg",
     bio: [
       "A Dra. Cristiane Reis é advogada há 27 anos e sócia fundadora da Duarte Reis Sociedade de Advogados, com atuação consolidada no Direito Empresarial e no Direito do Trabalho.",
       "Reconhecida por sua atuação no comércio varejista de calçados, construiu sólida reputação ao longo de sua trajetória prestando assessoria jurídica para mais de 200 empresas na capital e no interior de São Paulo, além de representar empresas do setor em negociações sindicais na cidade de São Paulo.",
@@ -84,8 +84,8 @@ export default function LawyerProfile() {
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lawyer-bg.jpg')" }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%)' }} />
           <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="w-28 h-28 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
-              <span className="font-heading text-3xl text-primary">{lawyer.initials}</span>
+            <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/40">
+              <img src={lawyer.photo} alt={lawyer.name} className="w-full h-full object-cover object-top" />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{lawyer.name}</h1>
             <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{lawyer.subtitle}</p>
