@@ -28,8 +28,8 @@ function LawyerCard({ name, role, photo, bio, href, delay }: typeof lawyers[0] &
       className={`block card-dark-glass p-8 md:p-10 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/30">
-        <img src={photo} alt={name} className="w-full h-full object-cover object-top" />
+      <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/30">
+        <img src={photo} alt={name} className="w-full h-full object-cover" style={{ objectPosition: photo === '/laefo.jpg' ? 'center 15%' : 'center top' }} />
       </div>
       <h3 className="font-heading text-xl text-white mb-1" style={{ fontWeight: 500 }}>{name}</h3>
       <p className="text-primary text-sm font-body mb-4">{role}</p>
