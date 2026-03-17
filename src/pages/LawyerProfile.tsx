@@ -81,7 +81,7 @@ export default function LawyerProfile() {
       <main>
         {/* Hero */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/office-bg.jpg")', backgroundPosition: 'center center' }} />
+          <div className="absolute inset-0 bg-cover" style={{ backgroundImage: 'url("/office-bg.jpg")', backgroundPosition: 'center 30%' }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.82) 100%)' }} />
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="w-40 h-40 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/40">
