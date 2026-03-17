@@ -84,8 +84,8 @@ export default function LawyerProfile() {
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lawyer-bg.jpg')" }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%)' }} />
           <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="w-28 h-28 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-6">
-              <span className="font-heading text-3xl text-primary">{lawyer.initials}</span>
+            <div className="w-28 h-28 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-primary/40">
+              <img src={lawyer.photo} alt={lawyer.name} className="w-full h-full object-cover object-top" />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl text-white mb-3" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>{lawyer.name}</h1>
             <p className="text-primary text-lg font-body mb-6" style={{ fontWeight: 300 }}>{lawyer.subtitle}</p>
