@@ -36,7 +36,7 @@ const lawyers: Record<string, {
   "dra-cristiane-reis": {
     name: "Dra. Cristiane Reis",
     subtitle: "Advogada | Sócia Fundadora | 27 anos de experiência",
-    initials: "CR",
+    photo: "/cristiane.jpg",
     bio: [
       "A Dra. Cristiane Reis é advogada há 27 anos e sócia fundadora da Duarte Reis Sociedade de Advogados, com atuação consolidada no Direito Empresarial e no Direito do Trabalho.",
       "Reconhecida por sua atuação no comércio varejista de calçados, construiu sólida reputação ao longo de sua trajetória prestando assessoria jurídica para mais de 200 empresas na capital e no interior de São Paulo, além de representar empresas do setor em negociações sindicais na cidade de São Paulo.",
