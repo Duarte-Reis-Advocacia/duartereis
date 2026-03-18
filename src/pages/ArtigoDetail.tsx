@@ -16,7 +16,7 @@ interface Article {
   slug: string;
   category: string;
   summary: string | null;
-  content: string | null;
+  content?: string | null;
   created_at: string | null;
 }
 
