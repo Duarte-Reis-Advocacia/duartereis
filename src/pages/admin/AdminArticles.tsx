@@ -68,7 +68,7 @@ export default function AdminArticles() {
           </div>
           <Link
             to="/admin/artigos/novo"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-4 py-2 rounded text-sm hover:bg-primary/90 transition-colors duration-200"
           >
             <Plus size={16} /> Novo post
           </Link>
@@ -103,19 +103,19 @@ export default function AdminArticles() {
                   <button
                     onClick={() => toggleStatus(article)}
                     title={article.status === "publicado" ? "Despublicar" : "Publicar"}
-                    className="p-2 rounded hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+                    className="p-2 rounded hover:bg-white/10 text-primary hover:text-primary/70 transition-colors"
                   >
                     {article.status === "publicado" ? <Eye size={16} /> : <EyeOff size={16} />}
                   </button>
                   <Link
                     to={`/admin/artigos/${article.id}/editar`}
-                    className="p-2 rounded hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+                    className="p-2 rounded hover:bg-white/10 text-primary hover:text-primary/70 transition-colors"
                   >
                     <Pencil size={16} />
                   </Link>
                   <button
                     onClick={() => setDeleteId(article.id)}
-                    className="p-2 rounded hover:bg-white/10 text-gray-400 hover:text-red-400 transition-colors"
+                    className="p-2 rounded hover:bg-white/10 text-red-400 hover:text-red-300 transition-colors duration-200"
                   >
                     <Trash2 size={16} />
                   </button>
@@ -133,7 +133,7 @@ export default function AdminArticles() {
             <h3 className="font-heading text-lg text-white mb-2">Excluir artigo?</h3>
             <p className="text-gray-400 text-sm font-body mb-6">Esta ação não pode ser desfeita.</p>
             <div className="flex gap-3 justify-end">
-              <button onClick={() => setDeleteId(null)} className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors">
+              <button onClick={() => setDeleteId(null)} className="border border-primary/50 text-primary px-4 py-2 text-sm rounded hover:bg-primary/10 transition-colors duration-200">
                 Cancelar
               </button>
               <button onClick={handleDelete} className="px-4 py-2 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors">

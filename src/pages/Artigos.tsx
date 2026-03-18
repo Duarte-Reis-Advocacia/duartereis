@@ -14,6 +14,7 @@ interface Article {
   slug: string;
   category: string;
   summary: string | null;
+  cover_image_url: string | null;
   created_at: string | null;
 }
 
@@ -24,7 +25,7 @@ export default function Artigos() {
   useEffect(() => {
     supabase
       .from("articles")
-      .select("id, title, slug, category, summary, created_at")
+      .select("id, title, slug, category, summary, cover_image_url, created_at")
       .eq("status", "publicado")
       .order("created_at", { ascending: false })
       .then(({ data }) => {
@@ -87,9 +88,20 @@ function ArticleCard({ article, delay, formatDate }: { article: Article; delay: 
       className={`group block card-dark-glass overflow-hidden transition-all duration-700 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="h-48 bg-gradient-to-br from-black via-[#111111] to-primary/20 flex items-center justify-center">
-        <span className="font-heading text-primary/40 text-6xl">§</span>
-      </div>
+      {article.cover_image_url ? (
+        <div className="h-48 overflow-hidden">
+          <img
+            src={article.cover_image_url}
+            alt={article.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        <div className="h-48 bg-gradient-to-br from-black via-[#111111] to-primary/20 flex items-center justify-center">
+          <span className="font-heading text-primary/40 text-6xl">§</span>
+        </div>
+      )}
       <div className="p-6">
         <span className="inline-block bg-primary/10 text-primary text-xs font-body px-3 py-1 rounded-full mb-3">{article.category}</span>
         <h3 className="font-heading text-lg text-white mb-2 group-hover:text-primary transition-colors duration-200 leading-tight">{article.title}</h3>
