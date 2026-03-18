@@ -14,6 +14,7 @@ interface Article {
   slug: string;
   category: string;
   summary: string | null;
+  cover_image_url: string | null;
   created_at: string | null;
 }
 
