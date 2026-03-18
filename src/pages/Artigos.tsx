@@ -25,7 +25,7 @@ export default function Artigos() {
   useEffect(() => {
     supabase
       .from("articles")
-      .select("id, title, slug, category, summary, created_at")
+      .select("id, title, slug, category, summary, cover_image_url, created_at")
       .eq("status", "publicado")
       .order("created_at", { ascending: false })
       .then(({ data }) => {
