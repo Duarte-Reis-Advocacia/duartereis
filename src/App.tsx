@@ -14,6 +14,11 @@ import Artigos from "./pages/Artigos";
 import ArtigoDetail from "./pages/ArtigoDetail";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminArticles from "./pages/admin/AdminArticles";
+import ArticleForm from "./pages/admin/ArticleForm";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +43,14 @@ function AnimatedRoutes() {
         <Route path="/artigos/:slug" element={<ArtigoDetail />} />
         <Route path="/termos-de-uso" element={<TermosDeUso />} />
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+
+        {/* Admin routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+        <Route path="/admin/artigos" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
+        <Route path="/admin/artigos/novo" element={<ProtectedRoute><ArticleForm /></ProtectedRoute>} />
+        <Route path="/admin/artigos/:id/editar" element={<ProtectedRoute><ArticleForm /></ProtectedRoute>} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
