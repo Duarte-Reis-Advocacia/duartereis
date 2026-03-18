@@ -24,6 +24,8 @@ export default function ArticleForm() {
   const [status, setStatus] = useState<"rascunho" | "publicado">("rascunho");
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
+  const [coverImageUrl, setCoverImageUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
   const [slugManual, setSlugManual] = useState(false);
   const [saving, setSaving] = useState(false);
 
@@ -42,6 +44,7 @@ export default function ArticleForm() {
             setStatus(data.status as "rascunho" | "publicado");
             setSummary(data.summary || "");
             setContent(data.content || "");
+            setCoverImageUrl(data.cover_image_url || "");
             setSlugManual(true);
           }
         });
@@ -53,6 +56,41 @@ export default function ArticleForm() {
     if (!slugManual) setSlug(generateSlug(val));
   };
 
+  const handleCoverUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast({ title: "Imagem muito grande. Máximo 5MB.", variant: "destructive" });
+      return;
+    }
+
+    setUploading(true);
+    try {
+      const ext = file.name.split(".").pop();
+      const fileName = `${Date.now()}-${slug || "artigo"}.${ext}`;
+
+      const { data, error } = await supabase.storage
+        .from("article-covers")
+        .upload(fileName, file, { upsert: true });
+
+      if (error) throw error;
+
+      const { data: urlData } = supabase.storage
+        .from("article-covers")
+        .getPublicUrl(data.path);
+
+      setCoverImageUrl(urlData.publicUrl);
+      toast({ title: "Imagem enviada com sucesso!" });
+    } catch {
+      toast({ title: "Erro ao enviar imagem. Tente novamente.", variant: "destructive" });
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleRemoveCover = () => setCoverImageUrl("");
+
   const handleSave = async (saveStatus: "rascunho" | "publicado") => {
     if (!title.trim() || !slug.trim()) {
       toast({ title: "Título e slug são obrigatórios", variant: "destructive" });
@@ -60,7 +98,15 @@ export default function ArticleForm() {
     }
 
     setSaving(true);
-    const payload = { title, slug, category, status: saveStatus, summary, content };
+    const payload = {
+      title,
+      slug,
+      category,
+      status: saveStatus,
+      summary,
+      content,
+      cover_image_url: coverImageUrl || null,
+    };
 
     const { error } = isEditing
       ? await supabase.from("articles").update(payload).eq("id", id)
@@ -104,14 +150,14 @@ export default function ArticleForm() {
             <button
               onClick={() => handleSave("rascunho")}
               disabled={saving}
-              className="px-4 py-2 text-sm font-semibold text-gray-300 border border-white/10 rounded hover:bg-white/5 transition-colors disabled:opacity-50"
+              className="border border-primary/50 text-primary px-4 py-2 text-sm font-semibold rounded hover:bg-primary/10 transition-colors duration-200 disabled:opacity-50"
             >
               Rascunho
             </button>
             <button
               onClick={() => handleSave("publicado")}
               disabled={saving}
-              className="px-4 py-2 text-sm font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
+              className="bg-primary text-black font-semibold px-4 py-2 text-sm rounded hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50"
             >
               Publicar
             </button>
@@ -146,6 +192,42 @@ export default function ArticleForm() {
               onChange={(e) => setCategory(e.target.value)}
               className="w-full bg-white/5 border border-white/10 text-white rounded px-4 py-2 focus:border-primary outline-none font-body text-sm"
             />
+          </div>
+
+          {/* Imagem de Capa */}
+          <div>
+            <label className="block text-sm text-white/70 mb-2 font-body">Imagem de Capa</label>
+            {coverImageUrl ? (
+              <div className="relative mb-3 w-full h-40 rounded overflow-hidden border border-white/10">
+                <img
+                  src={coverImageUrl}
+                  alt="Capa do artigo"
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={handleRemoveCover}
+                  className="absolute top-2 right-2 bg-black/70 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 transition-colors"
+                  title="Remover imagem"
+                >
+                  ✕
+                </button>
+              </div>
+            ) : (
+              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-primary/30 rounded cursor-pointer hover:border-primary/60 transition-colors bg-white/5">
+                <span className="text-white/50 text-sm font-body mb-1">
+                  {uploading ? "Enviando..." : "📷 Clique para selecionar uma imagem"}
+                </span>
+                <span className="text-white/30 text-xs font-body">JPG, PNG ou WEBP — máx. 5MB</span>
+                <input
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  className="hidden"
+                  onChange={handleCoverUpload}
+                  disabled={uploading}
+                />
+              </label>
+            )}
           </div>
 
           <div>
