@@ -91,6 +91,17 @@ export default function Footer() {
       </div>
       <div className="container mx-auto px-4 mt-10 pt-6" style={{ borderTop: "1px solid #1a1a1a" }}>
         <p className="text-gray-600 text-xs text-center font-body" style={{ fontWeight: 300 }}>© 2025 Duarte Reis Sociedade de Advogados · Todos os direitos reservados</p>
+        <p className="text-gray-600 text-xs text-center font-body mt-2" style={{ fontWeight: 300 }}>
+          Criado por{" "}
+          <a
+            href="https://nextcorporation.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 underline hover:text-primary transition-colors duration-200"
+          >
+            Next Corporation
+          </a>
+        </p>
       </div>
     </footer>
   );
