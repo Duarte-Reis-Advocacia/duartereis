@@ -36,7 +36,7 @@ export default function Hero() {
       <div
         ref={heroBgRef}
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: '72% 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}, transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
       />
       {/* Directional asymmetric overlay */}
       <div

@@ -40,7 +40,7 @@ export default function WhyUs() {
     >
       <div className="container mx-auto px-4">
         <SectionHeading title="Por Que Nos Escolher" light />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((b, i) => (
             <BenefitCard key={b.title} {...b} delay={i * 100} />
           ))}

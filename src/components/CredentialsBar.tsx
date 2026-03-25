@@ -3,7 +3,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const items = [
-  { icon: Award, value: 25, suffix: "+", label: "Anos de Experiência" },
+  { icon: Award, value: 30, suffix: "+", label: "Anos de Experiência" },
   { icon: Monitor, value: 0, suffix: "", label: "Atendimento Online & Presencial" },
   { icon: Target, value: 0, suffix: "", label: "Estratégia Sob Medida" },
   { icon: TrendingUp, value: 0, suffix: "", label: "Histórico Comprovado" },
