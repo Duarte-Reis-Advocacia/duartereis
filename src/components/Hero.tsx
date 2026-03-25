@@ -66,7 +66,7 @@ export default function Hero() {
             className="bg-primary text-primary-foreground px-8 py-4 rounded font-semibold text-lg hover:bg-gold-light transition-colors duration-200"
             style={{ animation: 'subtle-pulse 2.8s ease-in-out infinite' }}
           >
-            Consulta Gratuita pelo WhatsApp
+            Contato direto por WhatsApp
           </a>
           <Link
             to="/artigos"
