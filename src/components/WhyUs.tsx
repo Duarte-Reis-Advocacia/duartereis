@@ -1,4 +1,4 @@
-import { UserCheck, Monitor, Search, Trophy } from "lucide-react";
+import { UserCheck, Monitor, Search, Trophy, Shield } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 import type { LucideIcon } from "lucide-react";
