@@ -28,7 +28,7 @@ const areas: Record<string, AreaData> = {
   "direito-trabalhista": {
     title: "Advocacia Trabalhista",
     subtitle: "Segurança Jurídica para Trabalhadores e Empresas",
-    intro: "O Direito do Trabalho é a área de maior especialização da Duarte Reis. Há mais de 25 anos defendemos os direitos dos trabalhadores com estratégia, ética e resultados comprovados.",
+    intro: "O Direito do Trabalho é a área de maior especialização da Duarte Reis. Há mais de 30 anos defendemos os direitos dos trabalhadores com estratégia, ética e resultados comprovados.",
     topics: [
       { title: "Consultoria trabalhista preventiva", text: "Orientação estratégica para empresas e trabalhadores na prevenção de conflitos e passivos trabalhistas." },
       { title: "Defesa em reclamações trabalhistas", text: "Representação técnica e estratégica em todas as fases do processo trabalhista." },

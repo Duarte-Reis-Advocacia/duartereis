@@ -36,7 +36,7 @@ export default function Hero() {
       <div
         ref={heroBgRef}
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: 'center 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: '72% 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
       />
       {/* Directional asymmetric overlay */}
       <div
@@ -66,7 +66,7 @@ export default function Hero() {
             className="bg-primary text-primary-foreground px-8 py-4 rounded font-semibold text-lg hover:bg-gold-light transition-colors duration-200"
             style={{ animation: 'subtle-pulse 2.8s ease-in-out infinite' }}
           >
-            Consulta Gratuita pelo WhatsApp
+            Contato direto por WhatsApp
           </a>
           <Link
             to="/artigos"
@@ -78,7 +78,7 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap justify-start gap-6 md:gap-10 text-gray-300 text-sm font-body animate-[fade-in_1.4s_ease-out]" style={{ letterSpacing: '0.05em' }}>
-          <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><Shield size={18} className="text-primary" /> +25 Anos de Experiência</span>
+          <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><Shield size={18} className="text-primary" /> +30 Anos de Experiência</span></span>
           <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><Monitor size={18} className="text-primary" /> Atendimento Online e Presencial</span>
           <span className="flex items-center gap-2" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.9)' }}><MapPin size={18} className="text-primary" /> Mooca, São Paulo</span>
         </div>

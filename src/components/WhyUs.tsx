@@ -1,4 +1,4 @@
-import { UserCheck, Monitor, Search, Trophy } from "lucide-react";
+import { UserCheck, Monitor, Search, Trophy, Shield } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeading from "./SectionHeading";
 import type { LucideIcon } from "lucide-react";
@@ -7,7 +7,9 @@ const benefits = [
   { icon: UserCheck, title: "Atendimento direto com os Proprietários", text: "Você sempre falará diretamente com Dr. Laefo ou Dra. Cristiane, sem intermediários." },
   { icon: Monitor, title: "Online ou Presencial", text: "Consultas por videoconferência ou em nosso escritório na Mooca com estacionamento no local." },
   { icon: Search, title: "Estratégia Individualizada", text: "Cada caso é analisado em profundidade antes de qualquer ação." },
-  { icon: Trophy, title: "+25 Anos de Resultados", text: "Histórico sólido de êxito em processos trabalhistas em São Paulo." },
+  { icon: Trophy, title: "+30 Anos de Resultados", text: "Histórico sólido de êxito em processos trabalhistas em São Paulo." },
+  { icon: Shield, title: "Mais de 30 anos de experiência", text: "Décadas de atuação consolidada em Direito do Trabalho, contratos empresariais, consumidor e família." },
+  { icon: Monitor, title: "Atendimento Online e Presencial", text: "Consultas por videoconferência ou em nosso escritório na Mooca, da forma mais conveniente para você." },
 ];
 
 function BenefitCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; title: string; text: string; delay: number }) {
@@ -38,7 +40,7 @@ export default function WhyUs() {
     >
       <div className="container mx-auto px-4">
         <SectionHeading title="Por Que Nos Escolher" light />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((b, i) => (
             <BenefitCard key={b.title} {...b} delay={i * 100} />
           ))}
