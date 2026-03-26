@@ -17,11 +17,11 @@ export default function About() {
       }}
     >
       <div ref={ref} className={`container mx-auto px-4 max-w-3xl text-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <span className={`inline-block text-primary text-[11px] font-body tracking-[0.2em] uppercase origin-left transition-transform duration-500 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ fontWeight: 300 }}>● DESDE 1999</span>
+        <span className={`inline-block text-primary text-[11px] font-body tracking-[0.2em] uppercase origin-left transition-transform duration-500 ${isVisible ? "scale-x-100" : "scale-x-0"}`} style={{ fontWeight: 300 }}>● DESDE 1995</span>
         <h2 className="font-heading text-3xl md:text-4xl mt-3 mb-6 text-white" style={{ fontWeight: 300, letterSpacing: '0.06em' }}>Tradição, Ética e Resultado</h2>
         <div className={`h-0.5 w-16 bg-gradient-to-r from-primary to-transparent mb-6 mx-auto origin-center transition-transform duration-700 delay-150 ${isVisible ? "scale-x-100" : "scale-x-0"}`} />
         <p className="text-primary font-body text-lg mb-8" style={{ fontWeight: 400 }}>
-          Desde 1999 — experiência, estratégia e confiança.
+          Desde 1995 — experiência, estratégia e confiança.
         </p>
         <div className="space-y-4 text-gray-300 font-body text-sm leading-relaxed text-left" style={{ fontWeight: 300 }}>
           <p>Localizada na Mooca, em São Paulo, a Duarte Reis Sociedade de Advogados atua há mais de duas décadas oferecendo assessoria jurídica segura e soluções eficientes para empresas e particulares.</p>
