@@ -48,7 +48,7 @@ const lawyers: Record<string, {
     formation: ["Graduada em Direito", "Pós-Graduada em Direito Trabalhista"],
     badges: ["Direito do Trabalho", "Direito Empresarial", "Contratos Empresariais", "Assessoria Jurídica Preventiva"],
     highlights: [
-      "27 anos de advocacia",
+      "30 anos de advocacia",
       "Mais de 200 empresas atendidas",
       "Representação no setor calçadista em negociações sindicais",
       "Atuação consolidada no comércio varejista de SP e interior",
