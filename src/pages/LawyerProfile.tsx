@@ -35,10 +35,10 @@ const lawyers: Record<string, {
   },
   "dra-cristiane-reis": {
     name: "Dra. Cristiane Reis",
-    subtitle: "Advogada | Sócia Fundadora | 27 anos de experiência",
+    subtitle: "Advogada | Sócia Fundadora | 30 anos de experiência",
     photo: "/cristiane.jpg",
     bio: [
-      "A Dra. Cristiane Reis é advogada há 27 anos e sócia fundadora da Duarte Reis Sociedade de Advogados, com atuação consolidada no Direito Empresarial e no Direito do Trabalho.",
+      "A Dra. Cristiane Reis é advogada há 30 anos e sócia fundadora da Duarte Reis Sociedade de Advogados, com atuação consolidada no Direito Empresarial e no Direito do Trabalho.",
       "Reconhecida por sua atuação no comércio varejista de calçados, construiu sólida reputação ao longo de sua trajetória prestando assessoria jurídica para mais de 200 empresas na capital e no interior de São Paulo, além de representar empresas do setor em negociações sindicais na cidade de São Paulo.",
       "Seu trabalho é marcado pela prevenção de riscos trabalhistas, condução estratégica de negociações e defesa jurídica de empresas, sempre com foco na proteção do negócio e na segurança jurídica das atividades empresariais.",
       "Além do setor calçadista, também presta assessoria jurídica para empresas de diversos segmentos, incluindo redes de móveis planejados, gráficas e editoras, empresas de assistência técnica em telefonia, clínicas médicas e escritórios de contabilidade.",
@@ -48,7 +48,7 @@ const lawyers: Record<string, {
     formation: ["Graduada em Direito", "Pós-Graduada em Direito Trabalhista"],
     badges: ["Direito do Trabalho", "Direito Empresarial", "Contratos Empresariais", "Assessoria Jurídica Preventiva"],
     highlights: [
-      "27 anos de advocacia",
+      "30 anos de advocacia",
       "Mais de 200 empresas atendidas",
       "Representação no setor calçadista em negociações sindicais",
       "Atuação consolidada no comércio varejista de SP e interior",
