@@ -7,7 +7,7 @@ const benefits = [
   { icon: UserCheck, title: "Atendimento direto com os Proprietários", text: "Você sempre falará diretamente com Dr. Laefo ou Dra. Cristiane, sem intermediários." },
   { icon: Monitor, title: "Online ou Presencial", text: "Consultas por videoconferência ou em nosso escritório na Mooca com estacionamento no local." },
   { icon: Search, title: "Estratégia Individualizada", text: "Cada caso é analisado em profundidade antes de qualquer ação." },
-  { icon: Trophy, title: "+30 Anos de Resultados", text: "Histórico sólido de êxito em processos trabalhistas em São Paulo." },
+  { icon: Trophy, title: "Êxito Comprovado em Tribunais", text: "Histórico sólido de êxito em processos trabalhistas em São Paulo." },
   { icon: Shield, title: "Mais de 30 anos de experiência", text: "Décadas de atuação consolidada em Direito do Trabalho, contratos empresariais, consumidor e família." },
   { icon: Monitor, title: "Atendimento Online e Presencial", text: "Consultas por videoconferência ou em nosso escritório na Mooca, da forma mais conveniente para você." },
 ];
