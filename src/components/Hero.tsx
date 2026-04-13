@@ -6,6 +6,13 @@ import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   const heroBgRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     let rafId: number | null = null;
