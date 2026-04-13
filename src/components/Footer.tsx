@@ -5,6 +5,7 @@ const NAV = [
   { label: "Início", href: "/#inicio" },
   { label: "Sobre", href: "/#sobre" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 const LEGAL = [
@@ -12,30 +13,32 @@ const LEGAL = [
   { label: "Política de Privacidade", href: "/politica-de-privacidade" },
 ];
 
-function FooterContatoLink() {
+function FooterNavLink({ href, label }: { href: string; label: string }) {
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    const sectionId = href.replace('/#', '');
+
     if (location.pathname === '/') {
-      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      navigate('/#contato');
+      navigate('/');
       setTimeout(() => {
-        document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 350);
     }
   };
 
   return (
     <a
-      href="/#contato"
+      href={href}
       onClick={handleClick}
       className="text-gray-400 text-sm font-body hover:text-primary transition-colors duration-200"
       style={{ fontWeight: 300 }}
     >
-      Contato
+      {label}
     </a>
   );
 }
@@ -55,12 +58,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="text-gray-400 text-sm font-body hover:text-primary transition-colors duration-200" style={{ fontWeight: 300 }}>{n.label}</a>
+                  <FooterNavLink href={n.href} label={n.label} />
                 </li>
               ))}
-              <li>
-                <FooterContatoLink />
-              </li>
             </ul>
             <ul className="space-y-2 mt-4 pt-4 border-t border-white/5">
               {LEGAL.map((n) => (

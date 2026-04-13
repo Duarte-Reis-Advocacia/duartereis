@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Shield, MapPin, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -36,7 +36,7 @@ export default function Hero() {
       <div
         ref={heroBgRef}
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: '72% 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundPosition: isMobile ? 'center 20%' : '72% 30%', transform: 'translateY(0) translateZ(0)', willChange: 'transform' }}
       />
       {/* Directional asymmetric overlay */}
       <div
