@@ -94,12 +94,12 @@ export default function Footer() {
         <p className="text-gray-600 text-xs text-center font-body mt-2" style={{ fontWeight: 300 }}>
           Criado por{" "}
           <a
-            href="https://nextcorporation.com.br/"
+            href="https://www.nextassessoria.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 underline hover:text-primary transition-colors duration-200"
           >
-            Next Corporation
+            Next Assessoria
           </a>
         </p>
       </div>
